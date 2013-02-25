@@ -1,4 +1,4 @@
-<a href="//typeplate.com"><img src="./img/logo.png" alt="typeplate logo" width="216" height="216"></a>
+<a href="//typeplate.com"><img src="http://typeplate.com/img/logo.png" alt="typeplate logo" width="216" height="216"></a>
 ## What is it?
 Frameworks make decisions for you about how to organize, structure and design a site. Pattern libraries don&rsquo;t separate styling and markup, making them tough to use in a truly modular fashion. We weren&rsquo;t satisfied, so we made a thing that doesn&rsquo;t do that.
 
