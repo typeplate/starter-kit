@@ -1,0 +1,21 @@
+{
+  "name": "typeplate.scss",
+  "version": "1.0",
+  "author": "Dennis Gaebel and Zak Kain",
+  "homepage": "https://github.com/typeplate/typeplate-bower/",
+  "main": "_typeplate.scss",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/typeplate/typeplate-bower"
+  },
+  "licenses": [
+    {
+      "type": "CC",
+      "url": "http://creativecommons.org"
+    },
+    {
+      "type": "CC by 3.0",
+      "url": "http://creativecommons.org/licenses/by/3.0"
+    }
+  ]
+}
