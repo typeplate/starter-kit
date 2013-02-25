@@ -19,28 +19,13 @@ Not much goin on here in terms of bulk. As you can see, Typeplate is just a meas
 ## Installation
 Based on use cases for most developers' workflow, we recommend using typeplate just after your reset stylesheet (i.e. [normalize](http://necolas.github.com/normalize.css)) and your compass ``@import`` in order to operate as we've intended, but as you'll see from our <a href="//typeplate.com/demo">demo</a> it isn't necessary.
 
-Example using ``.scss`` syntax:
-
-	@import "compass";
-	@import "[your_project_path]/reset";
-	@import "[your_project_path]/typeplate";
-
-    // Custom Author Styles
-	// ====================================
-
-###&sect; Installation via ``.scss @import``
-
-Simply download our ``typeplate.scss`` file and import from your project's ``.scss`` file like so:
-
-	@import "[your_project_path]/typeplate";
-
 ###&sect; Installation via Bower
 
 Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``bower install typeplate`` and watch the magic happen. This is an example of how to include either version in your project:
 
 	@import "compass";
 	@import "[your_project_path]/reset";
-	@import "[root_project_path]/components/typeplate-scss/typeplate";
+	@import "[root_project_path]/components/typeplate";
 
 ## Bower Installation
 
