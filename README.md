@@ -16,9 +16,6 @@ Not much goin on here in terms of bulk. As you can see, Typeplate is just a meas
 - Raw ``.scss`` = **16.96kb**
 - Compressed ``.css`` = **3kb**
 
-## Customizing
-This will be the explanation on how to customize typeplate and what the vars can do.
-
 ## Installation
 Based on use cases for most developers' workflow, we recommend using typeplate just after your reset stylesheet (i.e. [normalize](http://necolas.github.com/normalize.css)) and your compass ``@import`` in order to operate as we've intended, but as you'll see from our <a href="//typeplate.com/demo">demo</a> it isn't necessary.
 
