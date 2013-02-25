@@ -56,54 +56,7 @@ You could also use the CSS version instead (btw&hellip;we don&rsquo;t condone th
 		<link rel="stylesheet" href="[root_project_path]/components/typeplate-css/typeplate.css">
 	</head>
 
-## Birds eye view of our project stack
-
-###&sect; Language Abstractions
-
-- [Compass](http://compass-style.org)
-- [Sass](http://sass-lang.com)
-
-###&sect; JS Build Tools
-
-- Mac and Windows : [Grunt](http://gruntjs.com)
-- Mac : [Codekit](http://incident57.com/codekit)
-
-###&sect; Sass &amp; Compass Build Tools
-
-- Windows : [fire.app](http://fireapp.handlino.com)
-- Mac : [Codekit](http://incident57.com/codekit)
-
-###&sect; Package Management
-
-- [Bower](http://twitter.github.com/bower) (requires [Node](http://nodejs.org) &amp; [npm](https://npmjs.org))
-
-##Contributing Guidelines
-###&sect; Pull Requests
-When contributing (by the way you're awesome for that so thanks) please keep your commits small and targeted when you're prepared for filing a Pull Request. We'd prefer not seeing Pull Requests that contain 20 commits in multiple spots. Keep it small and it will make things simpler and much cleaner in the long run.
-
-###&sect; Feature Branches
-If you're making a new feature for Typeplate then make sure you name your branch as follows:
-
-    feature/your_feature_name
-
-###&sect; Patches
-If you're making a quick patch for Typeplate (like a spelling mistake for example) then make sure you name your branch as follows:
-
-    patch/your_patch_name
-
-##Local Development
-
-&sect; **Stylesheets** : ``.scss``
-
-Make sure compass is installed by executing the following bash command (Mac only) from your CLI:
-
-    gem install compass
-
-You can always check if they're installed by running the bash command (Mac only) ``gem list`` which will list all your gems installed.
-
-&sect; **Compiling** : Javascript, Sass and Compass
-
-In order to compile our projects stylesheets and scripts we use [Codekit](http://incident57.com/codekit), but we've also taken the time to think about you non&ndash;Mac contributors as well. For this particular scenario we've provided you with [grunt](http://gruntjs.com) which is platform independent Javascript that uses the CLI to compile, concatenate and minify Javascript.
+## Bower Installation
 
 &sect; **Package Management** : [Bower](http://twitter.github.com/bower)
 
