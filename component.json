@@ -6,7 +6,7 @@
   "main": "_typeplate.scss",
   "repository": {
     "type": "git",
-    "url": "git://github.com/typeplate/typeplate-bower"
+    "url": "git://github.com/typeplate/typeplate-bower.git"
   },
   "licenses": [
     {
