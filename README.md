@@ -6,18 +6,18 @@ Frameworks make decisions for you about how to organize, structure and design a 
 Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped&ndash;down Sass library concerned with the appropriate technical implementation of design patterns&ndash;not how they look.
 
 ## Broweser Tested, Developer Approved
-We've even made sure to support IE7-8 while still supporting all current and major standards supporting browser makers.
+We've even made sure to support IE7&ndash;8 while still supporting all current and major standards supporting browsers.
 
 <img src="https://raw.github.com/paulirish/browser-logos/master/all-desktop.png" alt="" width="375">
 
 ## File Size
-Not much goin on here in terms of bulk. As you can see, Typeplate is just a measely 2.806 kb when compressed. That's really, really small.
+Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measely 3kb when compressed. That's really, really small.
 
-- Raw ``.scss`` = **16.96kb**
+- Raw ``.scss`` = **17.031kb**
 - Compressed ``.css`` = **3kb**
 
 ## Installation
-Based on use cases for most developers' workflow, we recommend using typeplate just after your reset stylesheet (i.e. [normalize](http://necolas.github.com/normalize.css)) and your compass ``@import`` in order to operate as we've intended, but as you'll see from our <a href="//typeplate.com/demo">demo</a> it isn't necessary.
+Based on use cases, we recommend using typeplate just after your reset stylesheet (i.e. [normalize](http://necolas.github.com/normalize.css)) and your compass ``@import`` in order to operate as we've intended, but as you'll see from our <a href="//typeplate.com/demo">demo</a> it isn't necessary.
 
 ###&sect; Installation via Bower
 
@@ -31,7 +31,7 @@ Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``
 
 &sect; **Package Management** : [Bower](http://twitter.github.com/bower)
 
-To keep track of our packages and allow for easy updating we use [Bower](http://twitter.github.com/bower) Package Manager which installs all components in the "components" directory of this project. In order to install bower you must first have Node and npm installed on your machine. Once Node and npm are installed simply run the command below  (which works on both Windows/Mac and one of the reasons why we chose it).
+In order to install bower you must first have [Node](http://nodejs.org) and [npm](https://npmjs.org) installed on your machine. Once [Node](http://nodejs.org) and [npm](https://npmjs.org) are installed simply run the command below  (which works on both Windows/Mac and one of the reasons why we chose it).
 
 	npm install bower -g
 
