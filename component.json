@@ -1,6 +1,6 @@
 {
   "name": "typeplate.scss",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Dennis Gaebel and Zak Kain",
   "homepage": "https://github.com/typeplate/typeplate-bower/",
   "main": "_typeplate.scss",
