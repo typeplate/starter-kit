@@ -6,8 +6,6 @@ Frameworks make decisions for you about how to organize, structure and design a 
 Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design choices, but define proper markup with extensible styling for common typographic patterns. A stripped&ndash;down Sass library concerned with the appropriate technical implementation of design patterns&ndash;not how they look.
 
 ## Broweser Tested, Developer Approved
-We've even made sure to support IE7&ndash;8 while still supporting all current and major standards supporting browsers.
-
 <img src="https://raw.github.com/paulirish/browser-logos/master/all-desktop.png" alt="" width="375">
 
 ## File Size
