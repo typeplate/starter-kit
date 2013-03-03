@@ -11,19 +11,48 @@ Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design c
 ## File Size
 Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measely 3kb when compressed. That's really, really small.
 
-- Raw ``.scss`` = **17.031kb**
-- Compressed ``.css`` = **3kb**
+**Sass, LESS & Stylus**
+
+- Raw = **17kb**
+- Compressed = **3kb**
+
+**CSS**
+
+- Raw = **6kb**
 
 ## Installation
 Based on use cases, we recommend using typeplate just after your reset stylesheet (i.e. [normalize](http://necolas.github.com/normalize.css)) and your compass ``@import`` in order to operate as we've intended, but as you'll see from our <a href="//typeplate.com/demo">demo</a> it isn't necessary.
 
 ###&sect; Installation via Bower
 
-Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``bower install typeplate`` and watch the magic happen. This is an example of how to include either version in your project:
+Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``bower install typeplate`` and watch the magic happen. This is an example of how to include either version in your project. We should also mention that Compass is totally optional.
+
+**Sass**
 
 	@import "compass";
 	@import "[your_project_path]/reset";
-	@import "[root_project_path]/components/typeplate";
+	@import "[root_project_path]/components/scss/typeplate";
+	
+**LESS**
+
+	@import "compass";
+	@import "[your_project_path]/reset";
+	@import "[root_project_path]/components/less/typeplate.less";
+	
+**Stylus**
+
+	@import "compass";
+	@import "[your_project_path]/reset";
+	@import "[root_project_path]/components/less/typeplate.styl";
+	
+**CSS**
+
+You could also use the CSS version instead (btw&hellip;we don&rsquo;t condone this method depicted below. In reality you should copy the contents of the CSS file and paste the contents in the top of your projects stylesheet):
+
+	<head>
+		<link rel="stylesheet" href="[root_project_path]/components/normalize-css/normalize.css">
+		<link rel="stylesheet" href="[root_project_path]/components/css/typeplate.css">
+	</head>
 
 ## Bower Installation
 
