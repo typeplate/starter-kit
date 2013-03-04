@@ -18,7 +18,7 @@ Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just
 
 **CSS**
 
-- Raw = **6kb**
+- Raw = **7kb**
 
 ## Installation
 Based on use cases, we recommend using typeplate just after your reset stylesheet (i.e. [normalize](http://necolas.github.com/normalize.css)) and your compass ``@import`` in order to operate as we've intended, but as you'll see from our <a href="//typeplate.com/demo">demo</a> it isn't necessary.
@@ -32,19 +32,19 @@ Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``
 	@import "compass";
 	@import "[your_project_path]/reset";
 	@import "[root_project_path]/components/scss/typeplate";
-	
+
 **LESS**
 
 	@import "compass";
 	@import "[your_project_path]/reset";
 	@import "[root_project_path]/components/less/typeplate.less";
-	
+
 **Stylus**
 
 	@import "compass";
 	@import "[your_project_path]/reset";
 	@import "[root_project_path]/components/stylus/typeplate.styl";
-	
+
 **CSS**
 
 You could also use the CSS version instead (btw&hellip;we don&rsquo;t condone this method depicted below. In reality you should copy the contents of the CSS file and paste the contents in the top of your projects stylesheet):
