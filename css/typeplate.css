@@ -1,8 +1,9 @@
+@charset "UTF-8";
 /*
 +---------------------------------------------------------------------+
 |        _                               _         _                  |
 |       | |_  _   _  _ __    ___  _ __  | |  __ _ | |_  ___           |
-|       | __|| | | || '_ \  / _ \| '_ \ | | / _` || __|/ _ \          |
+|       | __|| | | || '_ \  / _ \| '_ \ | | / _ || __|/ _ \           |
 |       | |_ | |_| || |_) ||  __/| |_) || || (_| || |_|  __/          |
 |        \__| \__, || .__/  \___|| .__/ |_| \__,_| \__|\___|          |
 |             |___/ |_|          |_|                                  |
@@ -17,125 +18,125 @@
 |                                                                     |
 +---------------------------------------------------------------------+
 */
+
+/**
+ *
+ *
+  Unicode Ampersand
+ *
+ */
+
 @font-face {
-  font-family: Ampersand;
-  src: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
   unicode-range: U+0026;
 }
+
 @font-face {
-  font-family: Ampersand;
-  src: local('Georgia');
+  font-family: "Ampersand";
+  src: local("Georgia");
   unicode-range: U+270C;
 }
+
+.amp {
+  font-family: Ampersand, Georgia, serif;
+}
+
 /**
- * Dropcap Sass @include
- * Use the following Sass @include with any selector you feel necessary.
  *
-    dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: inherit, $padding: inherit, $color: inherit, $lineHeight: 1, $bg: transparent)    
  *
- * Extends this object into your custom stylesheet.
+  Base Type
  *
  */
 html {
   font: normal 112.5%/1.65 serif;
 }
+
 body {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
-  -o-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  color: #444;
+  color: #444444;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
 .tera {
   font-size: 117px;
-  font-size: 6.5 rem;
-  margin-bottom: 0.25384615384615383 rem;
+  font-size: 6.5rem;
+  margin-bottom: 0.25385rem;
 }
+
 .giga {
   font-size: 90px;
-  font-size: 5 rem;
-  margin-bottom: 0.33 rem;
+  font-size: 5rem;
+  margin-bottom: 0.33rem;
 }
+
 .mega {
   font-size: 72px;
-  font-size: 4 rem;
-  margin-bottom: 0.4125 rem;
+  font-size: 4rem;
+  margin-bottom: 0.4125rem;
 }
-.alpha,
-h1 {
+
+h1,
+.alpha {
   font-size: 60px;
-  font-size: 3.3333333333333335 rem;
-  margin-bottom: 0.495 rem;
+  font-size: 3.33333rem;
+  margin-bottom: 0.495rem;
 }
-.beta,
-h2 {
+
+h2,
+.beta {
   font-size: 48px;
-  font-size: 2.6666666666666665 rem;
-  margin-bottom: 0.61875 rem;
+  font-size: 2.66667rem;
+  margin-bottom: 0.61875rem;
 }
-.gamma,
-h3 {
+
+h3,
+.gamma {
   font-size: 36px;
-  font-size: 2 rem;
-  margin-bottom: 0.825 rem;
+  font-size: 2rem;
+  margin-bottom: 0.825rem;
 }
-.delta,
-h4 {
+
+h4,
+.delta {
   font-size: 24px;
-  font-size: 1.3333333333333333 rem;
-  margin-bottom: 1.2375 rem;
+  font-size: 1.33333rem;
+  margin-bottom: 1.2375rem;
 }
-.epsilon,
-h5 {
+
+h5,
+.epsilon {
   font-size: 21px;
-  font-size: 1.1666666666666667 rem;
-  margin-bottom: 1.4142857142857141 rem;
+  font-size: 1.16667rem;
+  margin-bottom: 1.41429rem;
 }
-.zeta,
-h6 {
+
+h6,
+.zeta {
   font-size: 18px;
-  font-size: 1 rem;
-  margin-bottom: 1.65 rem;
+  font-size: 1rem;
+  margin-bottom: 1.65rem;
 }
-h1 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-}
-h2 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-}
-h3 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-}
-h4 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-}
-h5 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-}
-h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-}
-p {
-  margin: 0 0 1.5em;
-}
-p + p {
-  text-indent: 1.5em;
-  margin-top: -1.5em;
-}
+
+/**
+ *
+  Hyphens
+ *
+ */
 abbr,
 acronym,
 blockquote,
@@ -149,58 +150,98 @@ samp,
 tt,
 var,
 xmp {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -o-hyphens: none;
-  hyphens: none;
+  /* Accepted values: [ none | manual | auto ] */
+  -webkit-hyphens: none;  /* Safari 5.1 thru 6, iOS 4.2 thru 6 */
+  -moz-hyphens: none;   /* Firefox 16 thru 20 */
+  -ms-hyphens: none;    /* IE10 */
+  -o-hyphens: none;   /* PRESTO...haha LOL */
+  hyphens: none;      /* W3C standard */
 }
+
+/**
+ *
+  Paragraphs
+ *
+ */
+
+p {
+  margin: 0 0 1.5em;
+}
+
+p + p {
+  text-indent: 1.5em;
+  margin-top: -1.5em;
+}
+
+/**
+ *
+  Code Blocks
+ *
+ */
+
 pre code {
   word-wrap: normal;
   white-space: -moz-pre-wrap;
   white-space: pre-wrap;
 }
+
 pre {
   white-space: pre;
 }
+
 code {
   white-space: pre;
   font-family: monospace;
 }
+
 /**
  * Abbreviations Markup
  *
-    <abbr title="hyper text markup language">HMTL</abbr>
+  <abbr title="hyper text markup language">HMTL</abbr>
  *
- * Extends this object into your markup.
+ * Extend this object into your markup.
  *
  */
 abbr {
   font-variant: small-caps;
   font-weight: 600;
   text-transform: lowercase;
-  color: #808080;
+  color: gray;
 }
 abbr:hover {
   cursor: help;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #222;
+  color: #222222;
 }
+
+.drop-cap:first-letter {
+  float: left;
+  margin: 0;
+  padding: 0.125em 0.125em 0 0;
+  font-size: 6em;
+  font-family: Copperplate;
+  line-height: 0.5;
+  text-indent: 0;
+  background: transparent;
+  color: inherit;
+}
+
 /**
  * Lining Definition Style Markup
  *
-    <dl class="lining">
-        <dt><b></b></dt>
-        <dd></dd>
-    </dl>
+  <dl class="lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
  *
- * Extends this object into your markup.
+ * Extend this object into your markup.
  *
  */
 .lining dt,
@@ -220,15 +261,16 @@ h6 {
   content: ": ";
   margin-left: -0.2rem;
 }
+
 /**
  * Dictionary Definition Style Markup
  *
-    <dl class="dictionary-style">
-        <dt><b></b></dt>
-            <dd></dd>
-    </dl>
+  <dl class="dictionary-style">
+    <dt><b></b></dt>
+      <dd></dd>
+  </dl>
  *
- * Extends this object into your markup.
+ * Extend this object into your markup.
  *
  */
 .dictionary-style dt {
@@ -246,14 +288,15 @@ h6 {
 .dictionary-style dd:before {
   content: counter(definitions, decimal) ". ";
 }
+
 /**
  * Stats Tab Markup
  *
-    <ul class="stats-tabs">
-        <li><a href="#">[value]<b>[name]</b></a></li>
-    </ul>
+  <ul class="stats-tabs">
+    <li><a href="#">[value]<b>[name]</b></a></li>
+  </ul>
  *
- * Extends this object into your markup.
+ * Extend this object into your markup.
  *
  */
 .stats-tabs {
@@ -263,7 +306,7 @@ h6 {
   display: inline-block;
   margin: 0 0.625rem 0 0;
   padding: 0 0.625rem 0 0;
-  border-right: 0.125rem solid #ccc;
+  border-right: 0.125rem solid #cccccc;
 }
 .stats-tabs li:last-child {
   margin: 0;
@@ -281,29 +324,32 @@ h6 {
   font-size: 0.875rem;
   font-weight: normal;
 }
-/* --------------------------------------------------------------------------
-*
+
+/**
  * Blockquote Markup
  *
-    <blockquote cite="">
-        <p>&Prime&Prime</p>
-        <cite>
-            <small><a href=""></a></small>
-        </cite>
-    </blockquote>
+  <blockquote cite="">
+    <p>&Prime;&Prime;</p>
+    <cite>
+      <small><a href=""></a></small>
+    </cite>
+  </blockquote>
  *
- * Extends this object into your markup.
+ * Extend this object into your markup.
+ *
  */
+
+
 /**
  * Pull Quotes Markup
  *
-    <aside class="pull-quote">
-        <blockquote>
-            <p></p>
-        </blockquote>
-    </aside>
+  <aside class="pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
  *
- * Extends this object into your custom stylesheet.
+ * Extend this object into your custom stylesheet.
  *
  */
 .pull-quote {
@@ -313,44 +359,47 @@ h6 {
 .pull-quote:before,
 .pull-quote:after {
   height: 1em;
-  opacity: 0.15;
+  opacity: 0.25;
   position: absolute;
-  font-size: 4em;
+  font-size: 72px;
+  font-size: 4rem;
 }
 .pull-quote:before {
   content: '“';
-  top: 0em;
-  left: 0em;
+  top:  0;
+  left: 0;
 }
 .pull-quote:after {
   content: '”';
-  bottom: 0em;
-  right: 0em;
+  bottom: 0;
+  right: 0;
 }
-/*
+
+
+/**
  * Figures Markup
  *
- *  <figure>
- *      <figcaption>
- *          <strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
- *      </figcaption>
- *  </figure>
+  <figure>
+    <figcaption>
+      <strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+    </figcaption>
+  </figure>
  *
- * Extends this object into your markup.
+ * Extend this object into your markup.
  *
  */
-/*
+/**
  * Footnote Markup : Replace 'X' with your unique number for each footnote
  *
- *  <article>
- *      <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
- *      <footer>
- *          <ol class="foot-notes">
- *              <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
- *          </ol>
- *      </footer>
- *  </article>
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
  *
- * Extends this object into your markup.
+ * Extend this object into your markup.
  *
  */
