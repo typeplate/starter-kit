@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "author": "Dennis Gaebel and Zak Kain",
   "homepage": "https://github.com/typeplate/typeplate-bower/",
-  "main": "scss/_typeplate.scss",
   "repository": {
     "type": "git",
     "url": "git://github.com/typeplate/typeplate-bower.git"
