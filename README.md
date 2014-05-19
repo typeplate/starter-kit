@@ -11,17 +11,15 @@ Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design c
 ## &sect; File Size
 Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measely 3kb when compressed. That's really, really small.
 
-- Raw Sass = **19kb**
+- Raw Sass = **20kb**
 - Compressed Sass = **3kb**
-- Raw CSS = **11kb**
+- Raw CSS = **10kb**
 
 ## Installation
 
 - Rule #1 in Typeplate Club… Always use ``<meta charset="utf-8">`` in your document ``<head>``. Doing so alleviates authors need to use a charset from within a stylesheet. Anything imported into a document using ``<meta charset="utf-8">`` is encoded as ``utf-8`` globally.
 
 - Based on use cases for most developers' workflow, we recommend using Typeplate just after your reset stylesheet (i.e. [normalize](http://necolas.github.com/normalize.css)) and your compass ``@import`` in order to operate as we've intended, but as you'll see from our <a href="http://typeplate.com/demo">demo</a> it isn't necessary.
-
-- Regarding browsers <= IE8 : We don't always provide fallbacks for these legacy browsers and leave this up to you based on your needs. We feel IE8 will rapidly decline due to Microsoft upgrading users to install at least >= IE9 along with discontinuing updates for XP and below customers.
 
 ### &sect; Installation via ``.scss @import``
 
@@ -60,7 +58,7 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 
 ```html
 <head>
-	<link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet with typeplate.css inside -->
+    <link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet with typeplate.css inside -->
 </head>
 ```
 
@@ -93,8 +91,8 @@ You could also use the CSS version instead (btw… we don't condone this method 
 
 ```html
 <head>
-	<link rel="stylesheet" href="[root_project_path]/bower_components/normalize-css/normalize.css">
-	<link rel="stylesheet" href="[root_project_path]/bower_components/typeplate/css/typeplate.css">
+    <link rel="stylesheet" href="[root_project_path]/bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="[root_project_path]/bower_components/typeplate/css/typeplate.css">
 </head>
 ```
 ## Bower Installation
@@ -103,7 +101,7 @@ You could also use the CSS version instead (btw… we don't condone this method 
 
 In order to install bower you must first have [Node](http://nodejs.org) and [npm](https://npmjs.org) installed on your machine. Once [Node](http://nodejs.org) and [npm](https://npmjs.org) are installed simply run the command below  (which works on both Windows/Mac and one of the reasons why we chose it).
 
-	npm install bower -g
+    npm install bower -g
 
 ## &sect; What Else Is There?
 With so many packages to choose from, we recommend a few libraries to use with Typeplate to compliment. Bon Appetite!

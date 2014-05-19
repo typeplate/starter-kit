@@ -1,7 +1,7 @@
 /*!
 TYPEPLATE
 URL ........... http://typeplate.com
-VERSION ....... 1.1.3
+VERSION ....... 1.1.4
 Github ........ https://github.com/typeplate/bower
 AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
 LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
@@ -175,21 +175,21 @@ h6 {
 .tera {
 	font-size: 117px;
 	font-size: 6.5rem; /* 117 / 18 = 6.5 */
-	margin-bottom: 0.25385px;
+	margin-bottom: 4.56923px;
 	margin-bottom: 0.25385rem;
 }
 
 .giga {
 	font-size: 90px;
 	font-size: 5rem; /* 90 / 18 = 5 */
-	margin-bottom: 0.33px;
+	margin-bottom: 5.94px;
 	margin-bottom: 0.33rem;
 }
 
 .mega {
 	font-size: 72px;
 	font-size: 4rem; /* 72 / 18 = 4 */
-	margin-bottom: 0.4125px;
+	margin-bottom: 7.425px;
 	margin-bottom: 0.4125rem;
 }
 
@@ -197,7 +197,7 @@ h1,
 .alpha {
 	font-size: 60px;
 	font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
-	margin-bottom: 0.495px;
+	margin-bottom: 8.91px;
 	margin-bottom: 0.495rem;
 }
 
@@ -205,7 +205,7 @@ h2,
 .beta {
 	font-size: 48px;
 	font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
-	margin-bottom: 0.61875px;
+	margin-bottom: 11.1375px;
 	margin-bottom: 0.61875rem;
 }
 
@@ -213,7 +213,7 @@ h3,
 .gamma {
 	font-size: 36px;
 	font-size: 2rem; /* 36 / 18 = 2 */
-	margin-bottom: 0.825px;
+	margin-bottom: 14.85px;
 	margin-bottom: 0.825rem;
 }
 
@@ -221,7 +221,7 @@ h4,
 .delta {
 	font-size: 24px;
 	font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333 */
-	margin-bottom: 1.2375px;
+	margin-bottom: 22.275px;
 	margin-bottom: 1.2375rem;
 }
 
@@ -229,7 +229,7 @@ h5,
 .epsilon {
 	font-size: 21px;
 	font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
-	margin-bottom: 1.41429px;
+	margin-bottom: 25.45714px;
 	margin-bottom: 1.41429rem;
 }
 
@@ -237,7 +237,7 @@ h6,
 .zeta {
 	font-size: 18px;
 	font-size: 1rem; /* 18 = 18 × 1 */
-	margin-bottom: 1.65px;
+	margin-bottom: 29.7px;
 	margin-bottom: 1.65rem;
 }
 

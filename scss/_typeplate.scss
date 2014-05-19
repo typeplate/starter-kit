@@ -1,7 +1,7 @@
 /*!
 TYPEPLATE
 URL ........... http://typeplate.com
-VERSION ....... 1.1.3
+VERSION ....... 1.1.4
 Github ........ https://github.com/typeplate/bower
 AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
 LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
@@ -39,8 +39,8 @@ $measure: $font-base * $line-height;
 $indent-val: 1.5em !default;
 
 // Paragraph Styling Boolean
-// 'false' means no vertical whitespace
-// between subsequent paragraphs.
+// 'false' - no vertical whitespace between subsequent paragraphs.
+// 'true' - vertical whitespace between subsequent paragraphs.
 $paragraph-vertical-whitespace: false !default;
 
 
@@ -208,20 +208,19 @@ $dropcap-bg: transparent !default;
 
 // $Function $Measure-Margin
 // -------------------------------------//
-// divide 1 unit of measure by given font-size & return a relative em value
+// divide 1 unit of measure by given font-size & return a relative value
 
 @function measure-margin($scale, $measure, $value) {
+	$pixelValue: $measure/$scale;
+	$remValue: $pixelValue * $font-base;
 
-  $pixelValue: $measure/$scale;
-  $remValue: $pixelValue * $font-base;
-
-  @if $value == rem {
-    @return $pixelValue#{$value};
-  } @else if $value == em {
-    @return ($remValue/$scale)#{$value};
-  } @else {
-    @return $remValue#{$value};
-  }
+	@if $value == rem {
+		@return $pixelValue#{$value};
+	} @else if $value == em {
+		@return ($remValue/$scale)#{$value};
+	} @else {
+		@return $remValue#{$value};
+	}
 }
 
 
@@ -237,22 +236,23 @@ $dropcap-bg: transparent !default;
 
 @mixin type-scale($scale, $base, $value, $measure:"") {
 	@if $value == rem {
-      font-size: $scale#{px};
-      font-size: context-calc($scale, $base, $value);
-  } @else if $value == em {
-      font-size: context-calc($scale, $base, $value);
-  } @else {
-      font-size: $scale#{px};
-  }
+		font-size: $scale#{px};
+		font-size: context-calc($scale, $base, $value);
+	} @else if $value == em {
+		font-size: context-calc($scale, $base, $value);
+	} @else {
+		font-size: $scale#{px};
+	}
 
 	@if $measure != "" {
 		@if $value == rem {
-		  margin-bottom: measure-margin($scale, $measure, $value: px);
+			margin-bottom: measure-margin($scale, $measure, $value: px);
+			margin-bottom: measure-margin($scale, $measure, $value);
 		} @else if $value == em {
-		  margin-bottom: measure-margin($scale, $measure, $value: em);
+			margin-bottom: measure-margin($scale, $measure, $value: em);
 		} @else {
-        margin-bottom: measure-margin($scale, $measure, $value);
-    }
+			margin-bottom: measure-margin($scale, $measure, $value);
+		}
 	}
 }
 
