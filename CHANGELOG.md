@@ -5,6 +5,7 @@
    changes:
 
    - Issue 19: Margin calculation for pixel fallback incorrect. Measure Margin and Type Scale function now report correct values for varying units supplied w/fallbacks where required such as rem. Special thanks to @craigmdennis for the filing and assistance.
+   - Issue 17: Allow Typeplate to compile with libsass. Thanks to @malept for the fix.
 
 -------
 
