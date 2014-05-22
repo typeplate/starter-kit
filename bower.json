@@ -5,7 +5,7 @@
   "homepage": "https://github.com/typeplate/starter-kit",
   "repository": {
     "type": "git",
-    "url": "git://github.com/typeplate/starter-kit.git"
+    "url": "https://github.com/typeplate/starter-kit.git"
   },
   "licenses": [
     {
