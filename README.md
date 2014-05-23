@@ -64,7 +64,7 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 
 ### &sect; Installation via Bower
 
-Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``bower install typeplate`` for the CSS, Sass versions and watch the magic happen. This is an example of how to include either the CSS or Sass version in your project.
+Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``bower install typeplate-starter-kit`` for the CSS, Sass versions and watch the magic happen. This is an example of how to include either the CSS or Sass version in your project.
 
 **Sass**
 
