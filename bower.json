@@ -1,16 +1,6 @@
 {
   "name": "typeplate",
   "version": "1.1.4",
-  "author": "Dennis Gaebel and Zachary Kain",
-  "homepage": "https://github.com/typeplate/starter-kit",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/typeplate/starter-kit.git"
-  },
-  "licenses": [
-    {
-      "type": "CC by 3.0",
-      "url": "http://creativecommons.org/licenses/by/3.0"
-    }
-  ]
+  "homepage": "http://typeplate.com",
+  "description": "A Typographic Starter Kit"
 }
