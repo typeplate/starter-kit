@@ -19,7 +19,7 @@ LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
 // $Base
 // -------------------------------------//
 
-$typl8-serif-boolean: true !default; // can be redeclared from another stylesheet after your @import "typeplate.scss"
+$typl8-serif-boolean: true !default; // can be redeclared from another stylesheet post @import "typeplate.scss"
 $typl8-custom-font-family: false !default; // ex.) $typl8-custom-font-family: "Custom-Font-Name", serif;
 $typl8-font-family: if($typl8-serif-boolean, serif, sans-serif) !default; // non-font-face stack
 $typl8-font-weight: normal !default;
@@ -110,8 +110,8 @@ $typl8-cite-font-size: inherit !default;
 // $Small-Caps
 // -------------------------------------//
 
-$typl8-smallcaps-color: gray !default;
-$typl8-smallcaps-weight: 600 !default;
+$typl8-smcps-color: gray !default;
+$typl8-smcps-weight: 600 !default;
 
 
 // $DropCap
@@ -269,7 +269,7 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
-// $Smallcaps
+// $Smcps
 // -------------------------------------//
 // @notes:
 // http://caniuse.com/#search=font-variant
@@ -285,6 +285,20 @@ $typl8-dropcap-bg: transparent !default;
 	font-weight: $font-weight;
 	text-transform: lowercase;
 	color: $color;
+}
+
+%font-feature-smcp {
+	-ms-font-feature-settings: "smcp";
+	-moz-font-feature-settings: "smcp";
+	-webkit-font-feature-settings: "smcp";
+	font-feature-settings: "smcp";
+}
+
+%text-figures {
+	-ms-font-feature-settings: 'onum';
+	-moz-font-feature-settings: 'onum';
+	-webkit-font-feature-settings: 'onum';
+	font-feature-settings: 'onum';
 }
 
 
@@ -493,6 +507,8 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
+
+
 // $Wordwrap
 // -------------------------------------//
 
@@ -546,48 +562,38 @@ small {
 
 // $Headings
 // -------------------------------------//
-// @use
+// @use:
 // Extend included classes on any element of your
-// choosing for adjusting type based on the scale
-// provided.
-// Special Props to Harry Roberts for this trick.
+// choosing.
 
-// For example:
-
+// @example:
 // <h6 class="giga">Awesome Headline</h6>
 // <p class="tera">a story about a dude</p>
 
-// Our Type Scale is as follows with px fallbacks
-// for IE 6-8 as they do not understand REM units.
-//
-// 18, 21, 24, 36, 48, 60, 72, 90, 117
-
-// @notes
-// styles for all headings, in the style of @csswizardry
+// @notes:
+// Special Props to Harry Roberts for this trick.
 %hN {
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
 	line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
 	margin-top: 0;
 }
 
-// @notes
+// @notes:
 // Multi-dimensional array, where:
-// the first value is the name of the class
-// and the second value is the variable for the size
+// the first value is the name of the class.
+// The second value is the variable for size.
 $sizes: tera $typl8-tera, giga $typl8-giga, mega $typl8-mega, alpha $typl8-alpha, beta $typl8-beta, gamma $typl8-gamma, delta $typl8-delta, epsilon $typl8-epsilon, zeta $typl8-zeta;
 
-// @notes
+// @notes:
 // Sass loop to associate h1-h6 tags with their appropriate greek
-// heading based on a modular scale.
-// for each size in the scale, create a class name.
+// heading based on a modular scale. for each size in the scale,
+// create a class name.
 @each $size in $sizes {
 	.#{nth($size, 1)} {
 		@include type-scale(nth($size, 2), $typl8-font-base, '#{$typl8-type-scale-unit-value}', $typl8-measure);
 	}
 }
 
-// @notes
-// associate h1-h6 tags with their appropriate greek heading
 h1 {
 	@extend .alpha;
 	@extend %hN;
@@ -635,22 +641,17 @@ p {
 
 // $Hyphenation
 // -------------------------------------//
-// @notes
+// @notes:
 // http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
 
 abbr,
 acronym,
 blockquote,
 code,
-dir,
 kbd,
-listing,
-plaintext,
 q,
 samp,
-tt,
-var,
-xmp {
+var {
 	@include css-hyphens(none);
 }
 
@@ -684,7 +685,7 @@ code {
  *
  */
 abbr {
-	@include smallcaps($typl8-smallcaps-color, $typl8-smallcaps-weight);
+	@include smallcaps($typl8-smcps-color, $typl8-smcps-weight);
 	&[title]:hover {
 		cursor: help;
 	}
@@ -741,7 +742,7 @@ p + .drop-cap {
  *
 	<dl class="dictionary-style">
 		<dt><b></b></dt>
-			<dd></dd>
+		<dd></dd>
 	</dl>
  *
  * Extend this object into your markup.
