@@ -3,114 +3,114 @@
 // ===================================================
 
 
-// $BaseType
+// $Base
 // -------------------------------------//
 
-$font-weight: normal;
-$line-height: 1.65;
-$font-size: 112.5; // percentage value (16 * 112.5% = 18px)
-$font-base: 16 * ($font-size/100); // converts our percentage to a pixel value
-$font-family: serif; // Non-font-face font-stack
-
-$custom-font-family: false; // Custom font-face stack, if set will be added to the $font-family
+$typl8-serif-boolean: true; // can be redeclared from another stylesheet post @import "typeplate.scss"
+$typl8-custom-font-family: false; // ex.) $typl8-custom-font-family: "Custom-Font-Name", serif;
+$typl8-font-family: if($typl8-serif-boolean, serif, sans-serif); // non-font-face stack
+$typl8-font-weight: normal;
+$typl8-line-height: 1.65;
+$typl8-font-size: 112.5; // % = (16 * 112.5% = 18px)
+$typl8-font-base: 16 * ($typl8-font-size/100); // converts % to px
+$typl8-measure: $typl8-font-base * $typl8-line-height;
 
 
 // $Paragraphs
 // -------------------------------------//
 
-// Text Indentation Value
-$indent-val: 1.5em;
+$typl8-indent-val: 1.5em;
 
-// Paragraph Styling Boolean
-// 'false' means no vertical whitespace
-// between subsequent paragraphs.
-$paragraph-vertical-whitespace: false;
+// @use:
+// 'false' - no vertical whitespace between subsequent paragraphs.
+// 'true' - vertical whitespace between subsequent paragraphs.
+$typl8-paragraph-spacing: false;
 
 
-// $Small Print
+// $Small-Print
 // -------------------------------------//
 
-$small-print-size: 65%;
+$typl8-small-print-size: 65%;
 
 
-// $Color
+// $Base-Color
 // -------------------------------------//
 
-$body-copy-color: #444;
-$heading-color: #222;
+$typl8-body-copy-color: #444;
+$typl8-heading-color: #222;
 
 
 // $Ampersand
 // -------------------------------------//
 
-$amp-fontface-name: Ampersand;
-$amp-fontface-source: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
-$amp-fontface-fallback: local('Georgia');
-
-// Allows for our ampersand element to have differing
-// font-family from the ampersand unicode font-family.
-$amp-font-family: Verdana, sans-serif;
+$typl8-amp-fontface-name: Ampersand;
+$typl8-amp-font-family: Verdana, sans-serif;
+$typl8-amp-fontface-source: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
+$typl8-amp-fontface-fallback: local('Georgia');
 
 
 // $Icon-Font-Helper
 // -------------------------------------//
-// ex.1) $icon-fonts: (icon-name);
-// ex.2) $icon-fonts: (icon-name1, icon-name2, icon-name3);
-$icon-fonts: null;
+
+// @example:
+// ex.1) $typl8-icon-fonts: (icon-name);
+// ex.2) $typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
+$typl8-icon-fonts: null;
 
 
-// $TypeScale
+// $Typescale
 // -------------------------------------//
 
-$tera: 117; // 117 = 18 × 6.5
-$giga: 90; // 90 = 18 × 5
-$mega: 72; // 72 = 18 × 4
-$alpha: 60; // 60 = 18 × 3.3333
-$beta: 48; // 48 = 18 × 2.6667
-$gamma: 36; // 36 = 18 × 2
-$delta: 24; // 24 = 18 × 1.3333
-$epsilon: 21; // 21 = 18 × 1.1667
-$zeta: 18; // 18 = 18 × 1
+$typl8-tera: 117; // 117 = 18 × 6.5
+$typl8-giga: 90; // 90 = 18 × 5
+$typl8-mega: 72; // 72 = 18 × 4
+$typl8-alpha: 60; // 60 = 18 × 3.3333
+$typl8-beta: 48; // 48 = 18 × 2.6667
+$typl8-gamma: 36; // 36 = 18 × 2
+$typl8-delta: 24; // 24 = 18 × 1.3333
+$typl8-epsilon: 21; // 21 = 18 × 1.1667
+$typl8-zeta: 18; // 18 = 18 × 1
 
 
-// $TypeScale-Unit
+// $Typescale-Unit
 // -------------------------------------//
 
-$type-scale-unit-value: rem;
+$typl8-type-scale-unit-value: rem;
 
 
 // $Pull-Quotes
 // -------------------------------------//
 
-$pull-quote-fontsize: 4em;
-$pull-quote-opacity: 0.5;
-$pull-quote-color: #dc976e;
+$typl8-pull-quote-fontsize: 4em;
+$typl8-pull-quote-opacity: 0.5;
+$typl8-pull-quote-color: #dc976e;
 
 
 // $Citation
 // -------------------------------------//
 
-$cite-display: block;
-$cite-text-align: right;
-$cite-font-size: inherit;
+$typl8-cite-display: block;
+$typl8-cite-text-align: right;
+$typl8-cite-font-size: inherit;
 
 
-// $SmallCaps
+// $Small-Caps
 // -------------------------------------//
 
-$small-caps-color: gray;
-$small-caps-weight: 600;
+$typl8-prefixes: -webkit-, -moz-, -ms-, '';
+$typl8-smcps-color: gray;
+$typl8-smcps-weight: 600;
 
 
 // $DropCap
 // -------------------------------------//
 
-$dropcap-float-position: left;
-$dropcap-font-size: 4em;
-$dropcap-font-family: inherit;
-$dropcap-txt-indent: 0;
-$dropcap-margin: inherit;
-$dropcap-padding: inherit;
-$dropcap-color: inherit;
-$dropcap-line-height: 1;
-$dropcap-bg: transparent;
+$typl8-dropcap-float-position: left;
+$typl8-dropcap-font-size: 4em;
+$typl8-dropcap-font-family: inherit;
+$typl8-dropcap-txt-indent: 0;
+$typl8-dropcap-margin: inherit;
+$typl8-dropcap-padding: inherit;
+$typl8-dropcap-color: inherit;
+$typl8-dropcap-line-height: 1;
+$typl8-dropcap-bg: transparent;

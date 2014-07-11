@@ -110,6 +110,7 @@ $typl8-cite-font-size: inherit !default;
 // $Small-Caps
 // -------------------------------------//
 
+$typl8-prefixes: -webkit-, -moz-, -ms-, '';
 $typl8-smcps-color: gray !default;
 $typl8-smcps-weight: 600 !default;
 
@@ -261,11 +262,9 @@ $typl8-dropcap-bg: transparent !default;
 // accepted values: [ none | manual | auto ]
 
 @mixin css-hyphens($val) {
-	-webkit-hyphens: $val;
-	-moz-hyphens: $val;
-	-ms-hyphens: $val;
-	-o-hyphens: $val;
-	hyphens: $val;
+	@each $prefix in $typl8-prefixes {
+		#{$prefix}hyphens: $val;
+	}
 }
 
 
@@ -279,26 +278,12 @@ $typl8-dropcap-bg: transparent !default;
 // or don't provide them with their web font.
 
 @mixin smallcaps($color, $font-weight) {
-	-webkit-font-variant: small-caps;
-	-moz-font-variant: small-caps;
-	font-variant: small-caps;
+	@each $prefix in $typl8-prefixes {
+		#{$prefix}font-variant: small-caps;
+	}
 	font-weight: $font-weight;
 	text-transform: lowercase;
 	color: $color;
-}
-
-%font-feature-smcp {
-	-ms-font-feature-settings: "smcp";
-	-moz-font-feature-settings: "smcp";
-	-webkit-font-feature-settings: "smcp";
-	font-feature-settings: "smcp";
-}
-
-%text-figures {
-	-ms-font-feature-settings: 'onum';
-	-moz-font-feature-settings: 'onum';
-	-webkit-font-feature-settings: 'onum';
-	font-feature-settings: 'onum';
 }
 
 
@@ -529,6 +514,26 @@ $typl8-dropcap-bg: transparent !default;
 	word-wrap: auto;
 }
 
+
+// $OpenType
+// -------------------------------------//
+
+// @example:
+// body {
+//   @extend %font-feature-smcp;
+// }
+
+%font-feature-smcp {
+	@each $prefix in $typl8-prefixes {
+		#{$prefix}font-feature-settings: "smcp";
+	}
+}
+
+%text-figures {
+	@each $prefix in $typl8-prefixes {
+		#{$prefix}font-feature-settings: 'onum';
+	}
+}
 
 
 // .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
