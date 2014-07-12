@@ -1,3 +1,16 @@
+**Sass & CSS v2.0.0:**
+
+   date: 2014-07-12
+
+   changes:
+
+   - Issue 16: Namespacing. Helps to avoid collisions w/other libs and frameworks.
+   - Vendor Prefix Sass Loop for OpenType @mixins
+   - Updates CSS port to match Sass v2.0.0 port
+   - Removes Obsolete HTML Tags for Hyphens
+
+-------
+
 **Sass & CSS v1.1.4:**
 
    date: 2014-05-19

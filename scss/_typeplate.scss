@@ -20,7 +20,7 @@ LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
 // -------------------------------------//
 
 $typl8-serif-boolean: true !default; // can be redeclared from another stylesheet post @import "typeplate.scss"
-$typl8-custom-font-family: false !default; // ex.) $typl8-custom-font-family: "Custom-Font-Name", serif;
+$typl8-custom-font: false !default; // ex.) $typl8-custom-font: "Custom-Font-Name", serif;
 $typl8-font-family: if($typl8-serif-boolean, serif, sans-serif) !default; // non-font-face stack
 $typl8-font-weight: normal !default;
 $typl8-line-height: 1.65 !default;
@@ -88,7 +88,7 @@ $typl8-zeta: 18 !default; // 18 = 18 × 1
 // $Typescale-Unit
 // -------------------------------------//
 
-$typl8-type-scale-unit-value: rem !default;
+$typl8-typescale-unit: rem !default;
 
 
 // $Pull-Quotes
@@ -492,8 +492,6 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
-
-
 // $Wordwrap
 // -------------------------------------//
 
@@ -523,13 +521,13 @@ $typl8-dropcap-bg: transparent !default;
 //   @extend %font-feature-smcp;
 // }
 
-%font-feature-smcp {
+%font-feature--smcp {
 	@each $prefix in $typl8-prefixes {
 		#{$prefix}font-feature-settings: "smcp";
 	}
 }
 
-%text-figures {
+%font-feature--onum {
 	@each $prefix in $typl8-prefixes {
 		#{$prefix}font-feature-settings: 'onum';
 	}
@@ -547,8 +545,8 @@ $typl8-dropcap-bg: transparent !default;
 // -------------------------------------//
 
 html {
-	@if $typl8-custom-font-family {
-		font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-custom-font-family, $typl8-font-family;
+	@if $typl8-custom-font {
+		font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-custom-font, $typl8-font-family;
 	} @else {
 		font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-font-family;
 	}
@@ -587,7 +585,15 @@ small {
 // Multi-dimensional array, where:
 // the first value is the name of the class.
 // The second value is the variable for size.
-$sizes: tera $typl8-tera, giga $typl8-giga, mega $typl8-mega, alpha $typl8-alpha, beta $typl8-beta, gamma $typl8-gamma, delta $typl8-delta, epsilon $typl8-epsilon, zeta $typl8-zeta;
+$sizes: tera $typl8-tera, 
+		giga $typl8-giga,
+		mega $typl8-mega,
+		alpha $typl8-alpha,
+		beta $typl8-beta,
+		gamma $typl8-gamma,
+		delta $typl8-delta,
+		epsilon $typl8-epsilon,
+		zeta $typl8-zeta;
 
 // @notes:
 // Sass loop to associate h1-h6 tags with their appropriate greek
@@ -595,7 +601,7 @@ $sizes: tera $typl8-tera, giga $typl8-giga, mega $typl8-mega, alpha $typl8-alpha
 // create a class name.
 @each $size in $sizes {
 	.#{nth($size, 1)} {
-		@include type-scale(nth($size, 2), $typl8-font-base, '#{$typl8-type-scale-unit-value}', $typl8-measure);
+		@include type-scale(nth($size, 2), $typl8-font-base, '#{$typl8-typescale-unit}', $typl8-measure);
 	}
 }
 
@@ -664,13 +670,13 @@ var {
 // $Codeblocks
 // -------------------------------------//
 
-pre code {
-	@extend %normal-wrap;
-	@include white-space(pre-wrap);
-}
-
 pre {
 	@include white-space(pre);
+
+	code {
+		@extend %normal-wrap;
+		@include white-space(pre-wrap);
+	}
 }
 
 code {

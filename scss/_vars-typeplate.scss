@@ -7,7 +7,7 @@
 // -------------------------------------//
 
 $typl8-serif-boolean: true; // can be redeclared from another stylesheet post @import "typeplate.scss"
-$typl8-custom-font-family: false; // ex.) $typl8-custom-font-family: "Custom-Font-Name", serif;
+$typl8-custom-font: false; // ex.) $typl8-custom-font: "Custom-Font-Name", serif;
 $typl8-font-family: if($typl8-serif-boolean, serif, sans-serif); // non-font-face stack
 $typl8-font-weight: normal;
 $typl8-line-height: 1.65;
@@ -75,7 +75,7 @@ $typl8-zeta: 18; // 18 = 18 × 1
 // $Typescale-Unit
 // -------------------------------------//
 
-$typl8-type-scale-unit-value: rem;
+$typl8-typescale-unit: rem;
 
 
 // $Pull-Quotes
