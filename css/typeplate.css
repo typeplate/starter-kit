@@ -1,11 +1,11 @@
 /*!
-TYPEPLATE
+TYPEPLATE : STARTER KIT
 URL ........... http://typeplate.com
 VERSION ....... 2.0.0
-Github ........ https://github.com/typeplate/bower
+Github ........ https://github.com/typeplate/starter-kit
 AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
 LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
-LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
+LICENSE URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
 */
 
 
@@ -342,7 +342,7 @@ abbr {
 	-webkit-font-variant: small-caps;
 	-moz-font-variant: small-caps;
 	-ms-font-variant: small-caps;
-	font-variant: small-caps; /* https://developer.mozilla.org/en-US/docs/CSS/font-variant */
+	font-variant: small-caps;
 	font-weight: 600;
 	text-transform: lowercase;
 	color: gray;

@@ -11,9 +11,9 @@ Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design c
 ## &sect; File Size
 Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measely 3kb when compressed. That's really, really small.
 
-- Raw Sass = **20kb**
-- Compressed Sass = **3kb**
-- Raw CSS = **10kb**
+- Raw Sass = **18kb**
+- Compressed Sass = **5 KB**
+- Raw CSS = **10 KB**
 
 ## Installation
 

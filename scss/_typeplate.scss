@@ -1,42 +1,46 @@
 /*!
-TYPEPLATE
+TYPEPLATE : STARTER KIT
 URL ........... http://typeplate.com
 VERSION ....... 2.0.0
-Github ........ https://github.com/typeplate/bower
+Github ........ https://github.com/typeplate/starter-kit
 AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
 LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
-LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
+LICENSE URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
 */
 
 
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
+// ================================================================================= //
 // $Variables
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-
+// ================================================================================= //
 
 // $Base
 // -------------------------------------//
+// General base styles for type
+// 
+// $typl8-custom-font			ex.) $typl8-custom-font: "Custom-Font-Name", serif;
+// $typl8-font-size				% = (16 * 112.5% = 18px)
+// $typl8-font-base 			converts % to px
+// $typl8-font-family			non-font-face stack
 
-$typl8-serif-boolean: true !default; // can be redeclared from another stylesheet post @import "typeplate.scss"
-$typl8-custom-font: false !default; // ex.) $typl8-custom-font: "Custom-Font-Name", serif;
-$typl8-font-family: if($typl8-serif-boolean, serif, sans-serif) !default; // non-font-face stack
+$typl8-serif-boolean: true !default;
+$typl8-custom-font: false !default;
+$typl8-font-family: if($typl8-serif-boolean, serif, sans-serif) !default;
 $typl8-font-weight: normal !default;
 $typl8-line-height: 1.65 !default;
-$typl8-font-size: 112.5 !default; // % = (16 * 112.5% = 18px)
-$typl8-font-base: 16 * ($typl8-font-size/100) !default; // converts % to px
+$typl8-font-size: 112.5 !default;
+$typl8-font-base: 16 * ($typl8-font-size/100) !default;
 $typl8-measure: $typl8-font-base * $typl8-line-height;
+$typl8-prefixes: -webkit-, -moz-, -ms-, '';
 
 
 // $Paragraphs
 // -------------------------------------//
 
-$typl8-indent-val: 1.5em !default;
+// Whitespace styling for paragraphs.
+//
+// $typl8-paragraph-spacing		<'false' | 'true'>	controls paragraphs vertical whitespace.
 
-// @use:
-// 'false' - no vertical whitespace between subsequent paragraphs.
-// 'true' - vertical whitespace between subsequent paragraphs.
+$typl8-indent-val: 1.5em !default;
 $typl8-paragraph-spacing: false !default;
 
 
@@ -46,43 +50,55 @@ $typl8-paragraph-spacing: false !default;
 $typl8-small-print-size: 65% !default;
 
 
-// $Base-Color
+// $Base-Colors
 // -------------------------------------//
 
 $typl8-body-copy-color: #444 !default;
 $typl8-heading-color: #222 !default;
 
 
-// $Ampersand
+// $Ampersands
 // -------------------------------------//
 
-$typl8-amp-fontface-name: Ampersand !default;
-$typl8-amp-font-family: Verdana, sans-serif !default;
-$typl8-amp-fontface-source: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua') !default;
-$typl8-amp-fontface-fallback: local('Georgia') !default;
+$typl8-amp-fontface: Ampersand !default;
+$typl8-amp-fontfamily: Verdana, sans-serif !default;
+$typl8-amp-src: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua') !default;
+$typl8-amp-fallback: local('Georgia') !default;
 
 
 // $Icon-Font-Helper
 // -------------------------------------//
+// Link single or multiple icon font sets. Requires Compass
+//
+// single icon font 			$typl8-icon-fonts: (icon-name);
+// multiple icon font 		$typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
 
-// @example:
-// ex.1) $typl8-icon-fonts: (icon-name);
-// ex.2) $typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
 $typl8-icon-fonts: null !default;
 
 
 // $Typescale
 // -------------------------------------//
+// Greek heading names and scale using base font-size
+//
+// tera 					117 = 18 × 6.5
+// giga 					90 	= 18 × 5
+// mega 					72 	= 18 × 4
+// alpha 					60 	= 18 × 3.3333
+// beta 					48 	= 18 × 2.6667
+// gamma 					36 	= 18 × 2
+// delta 					24 	= 18 × 1.3333
+// epsilon 				21 	= 18 × 1.1667
+// zeta 					18 	= 18 × 1
 
-$typl8-tera: 117 !default; // 117 = 18 × 6.5
-$typl8-giga: 90 !default; // 90 = 18 × 5
-$typl8-mega: 72 !default; // 72 = 18 × 4
-$typl8-alpha: 60 !default; // 60 = 18 × 3.3333
-$typl8-beta: 48 !default; // 48 = 18 × 2.6667
-$typl8-gamma: 36 !default; // 36 = 18 × 2
-$typl8-delta: 24 !default; // 24 = 18 × 1.3333
-$typl8-epsilon: 21 !default; // 21 = 18 × 1.1667
-$typl8-zeta: 18 !default; // 18 = 18 × 1
+$typl8-tera: 117 !default;
+$typl8-giga: 90 !default;
+$typl8-mega: 72 !default;
+$typl8-alpha: 60 !default;
+$typl8-beta: 48 !default;
+$typl8-gamma: 36 !default;
+$typl8-delta: 24 !default;
+$typl8-epsilon: 21 !default;
+$typl8-zeta: 18 !default;
 
 
 // $Typescale-Unit
@@ -99,7 +115,7 @@ $typl8-pull-quote-opacity: 0.5 !default;
 $typl8-pull-quote-color: #dc976e !default;
 
 
-// $Citation
+// $Citations
 // -------------------------------------//
 
 $typl8-cite-display: block !default;
@@ -110,7 +126,6 @@ $typl8-cite-font-size: inherit !default;
 // $Small-Caps
 // -------------------------------------//
 
-$typl8-prefixes: -webkit-, -moz-, -ms-, '';
 $typl8-smcps-color: gray !default;
 $typl8-smcps-weight: 600 !default;
 
@@ -129,33 +144,30 @@ $typl8-dropcap-line-height: 1 !default;
 $typl8-dropcap-bg: transparent !default;
 
 
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
+// ================================================================================= //
 // $Fontfaces
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
+// ================================================================================= //
 
 
 // $Unicode-Range-Ampersand
 // -------------------------------------//
 
 @font-face {
-	font-family: '#{$typl8-amp-fontface-name}';
-	src: $typl8-amp-fontface-source;
+	font-family: '#{$typl8-amp-fontface}';
+	src: $typl8-amp-src;
 	unicode-range: U+0026;
 }
 
-// Ampersand fallback font for unicode range
+// fallback font for unicode range
 @font-face {
-	font-family: '#{$typl8-amp-fontface-name}';
-	src: $typl8-amp-fontface-fallback;
+	font-family: '#{$typl8-amp-fontface}';
+	src: $typl8-amp-fallback;
 	unicode-range: U+270C;
 }
 
 
 // $Icon-Font-Helper
 // -------------------------------------//
-
 // @use:
 // 1. Install Compass.
 // 2. Create a 'fonts' directory in the root of your project.
@@ -181,18 +193,16 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
+// ================================================================================= //
 // $Functions
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
+// ================================================================================= //
 
 
 // $Context Calculator
 // -------------------------------------//
-// @notes:
-// divide a given font-size by base
-// font-size & return a relative value
+// Divide a given font-size & return relative value
+//
+// example 				p { font-size: context-calc(24, 16, px); }
 
 @function context-calc($scale, $base, $value) {
 	@return ($scale/$base)#{$value};
@@ -201,9 +211,7 @@ $typl8-dropcap-bg: transparent !default;
 
 // $Measure-Margin
 // -------------------------------------//
-// @notes:
-// divide 1 unit of measure by given
-// font-size & return a relative value
+// divide 1 unit of measure by given font-size & return relative value
 
 @function measure-margin($scale, $measure, $value) {
 	$pixelValue: $measure/$scale;
@@ -219,11 +227,9 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
+// ================================================================================= //
 // $Mixins
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
+// ================================================================================= //
 
 
 // $Typescale
@@ -258,7 +264,6 @@ $typl8-dropcap-bg: transparent !default;
 // http://caniuse.com/#search=hyphens
 // http://trentwalton.com/2011/09/07/css-hyphenation
 
-// @use:
 // accepted values: [ none | manual | auto ]
 
 @mixin css-hyphens($val) {
@@ -273,9 +278,9 @@ $typl8-dropcap-bg: transparent !default;
 // @notes:
 // http://caniuse.com/#search=font-variant
 // http://blog.hypsometry.com/articles/true-small-capitals-with-font-face
-// font-variant depends on the font family.
-// some font-families don't support small caps
-// or don't provide them with their web font.
+// 'font-variant' depends on the font family in use.
+// Some font-families don't support small caps
+// or don't provide them with their Webfont.
 
 @mixin smallcaps($color, $font-weight) {
 	@each $prefix in $typl8-prefixes {
@@ -302,8 +307,8 @@ $typl8-dropcap-bg: transparent !default;
 // $Ampersand
 // -------------------------------------//
 
-@mixin ampersand($typl8-amp-font-family...) {
-	font-family: $typl8-amp-font-family;
+@mixin ampersand($typl8-amp-fontfamily...) {
+	font-family: $typl8-amp-fontfamily;
 }
 
 
@@ -369,11 +374,10 @@ $typl8-dropcap-bg: transparent !default;
 // $Dropcaps
 // -------------------------------------//
 
-// @use:
-// add the .dropcap class to your markup
-
-// @example:
-// <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, sit, placeat velit debitis perferendis officia optio molestias eos amet deleniti eaque praesentium iusto reprehenderit sed atque eum dolorum error quisquam.</p>
+// Add styling to intro paragraphs using a dropcap
+//
+// markup 			<p class="drop-cap">Lorem ipsum dolor sit amet</p>
+// example 			.dropcap { @include dropcap; }
 
 @mixin dropcap($float-position, $font-size, $font-family, $txt-indent, $margin, $padding, $color, $line-height, $bg) {
 	&:first-letter {
@@ -406,9 +410,7 @@ $typl8-dropcap-bg: transparent !default;
 // $Definition-Lists
 // -------------------------------------//
 // @notes:
-// <lining>
 // http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
-// <dictionary-style>
 // http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
 
 @mixin definition-list-style($style) {
@@ -463,29 +465,28 @@ $typl8-dropcap-bg: transparent !default;
 
 
 
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
+// ================================================================================= //
 // $Placeholders
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
+// ================================================================================= //
 
 
 // $Ampersands
 // -------------------------------------//
-
-// @use:
-// Call your ampersand on any element you wish from another stylesheet
-// using this Sass extend we've provided. For exmaple:
+// Call your custom ampersand on any element.
 //
-// <h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
-
-// @example:
-// .ampersand { @extend %ampersand-placeholder; }
+// markup 				<h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
+// example 				.ampersand { @extend %ampersand-placeholder; }
 
 %ampersand-placeholder {
-	@include ampersand($typl8-amp-fontface-name, $typl8-amp-font-family);
+	@include ampersand($typl8-amp-fontface, $typl8-amp-fontfamily);
 }
 
+
+// $Blockquote
+// -------------------------------------//
+// Style your blockquote citations
+//
+// example 					.citation { @extend %cite; }
 
 %cite {
 	@include cite-style($typl8-cite-display, $typl8-cite-text-align, $typl8-cite-font-size);
@@ -494,11 +495,11 @@ $typl8-dropcap-bg: transparent !default;
 
 // $Wordwrap
 // -------------------------------------//
-
-// @use:
-// <normal>: Indicates that lines may only break at normal word break points.
-// <break-word> : Indicates that normally unbreakable words may be broken at arbitrary 
-//              points if there are no otherwise acceptable break points in the line.
+// Control word wrapping and breaks in your text.
+//
+// 'normal'					Lines may only break at normal word break points.
+// 'break-word'			Unbreakable words may be broken at arbitrary points.
+// example 					article { @extend %breakword; }
 
 %breakword {
 	word-wrap: break-word;
@@ -515,11 +516,10 @@ $typl8-dropcap-bg: transparent !default;
 
 // $OpenType
 // -------------------------------------//
-
-// @example:
-// body {
-//   @extend %font-feature-smcp;
-// }
+// Control OpenType feature settings where desired.
+//
+// smallcaps 			body { @extend %font-feature--smcp; }
+// txt figures 		body { @extend %font-feature--onum; }
 
 %font-feature--smcp {
 	@each $prefix in $typl8-prefixes {
@@ -534,11 +534,9 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
+// ================================================================================= //
 // $Styles
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
+// ================================================================================= //
 
 
 // $Globals
@@ -565,19 +563,17 @@ small {
 
 // $Headings
 // -------------------------------------//
-// @use:
-// Extend included classes on any element of your
-// choosing.
-
-// @example:
-// <h6 class="giga">Awesome Headline</h6>
-// <p class="tera">a story about a dude</p>
-
-// @notes:
+// Heading scale. Call from actual headings or other elements.
 // Special Props to Harry Roberts for this trick.
+//
+// markup 								<h6 class="giga">Awesome Headline</h6>
+// 				 								<p class="tera">A story about a dude</p>
+// optimizeLegibility 		enables ligatures and kerning
+// single line height 		fixes huge spaces when a heading wraps two lines
+
 %hN {
-	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
-	line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
+	text-rendering: optimizeLegibility;
+	line-height: 1;
 	margin-top: 0;
 }
 
@@ -585,7 +581,9 @@ small {
 // Multi-dimensional array, where:
 // the first value is the name of the class.
 // The second value is the variable for size.
-$sizes: tera $typl8-tera, 
+
+$sizes:
+		tera $typl8-tera,
 		giga $typl8-giga,
 		mega $typl8-mega,
 		alpha $typl8-alpha,
@@ -599,6 +597,7 @@ $sizes: tera $typl8-tera,
 // Sass loop to associate h1-h6 tags with their appropriate greek
 // heading based on a modular scale. for each size in the scale,
 // create a class name.
+
 @each $size in $sizes {
 	.#{nth($size, 1)} {
 		@include type-scale(nth($size, 2), $typl8-font-base, '#{$typl8-typescale-unit}', $typl8-measure);
@@ -687,14 +686,7 @@ code {
 
 // $Smallcaps
 // -------------------------------------//
-/**
- * Abbreviations Markup
- *
-	<abbr title="hyper text markup language">HMTL</abbr>
- *
- * Extend this object into your markup.
- *
- */
+
 abbr {
 	@include smallcaps($typl8-smcps-color, $typl8-smcps-weight);
 	&[title]:hover {
@@ -703,7 +695,7 @@ abbr {
 }
 
 
-// $Headings-Color
+// $Heading Colors
 // -------------------------------------//
 
 h1,
@@ -723,9 +715,7 @@ h6 {
 	@include dropcap($typl8-dropcap-float-position, $typl8-dropcap-font-size, $typl8-dropcap-font-family, $typl8-dropcap-txt-indent, $typl8-dropcap-margin, $typl8-dropcap-padding, $typl8-dropcap-color, $typl8-dropcap-line-height, $typl8-dropcap-bg);
 }
 
-// @notes
-// combats our sibling paragraphs syling and indentation
-p + .drop-cap {
+p + .drop-cap { // combats our sibling paragraphs syling and indentation
 	text-indent: 0;
 	margin-top: 0;
 }
@@ -744,6 +734,7 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
+
 .lining {
 	@include definition-list-style(lining);
 }
@@ -759,6 +750,7 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
+
 .dictionary-style {
 	@include definition-list-style(dictionary-style);
 }
@@ -815,7 +807,7 @@ p + .drop-cap {
  *
 	<figure>
 		<figcaption>
-			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+			<strong>Fig. X.X | </strong><cite title=""></cite>
 		</figcaption>
 	</figure>
  *
