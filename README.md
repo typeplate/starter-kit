@@ -23,33 +23,37 @@ Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just
 
 ### &sect; Installation via ``.scss @import``
 
-Simply download our ``_typeplate.scss`` partial file and import from your project's primary ``.scss`` file like so:
+Simply download our ``_typeplate-sk.scss`` partial file and import from your project's primary ``.scss`` file like so:
 
 ```scss
+// Imports
+// ====================================
+
 @import "compass"; // Not required. For example purposes only.
 @import "[your_project_path]/reset"; // Not required. For example purposes only.
-@import "[your_project_path]/typeplate";
+@import "[your_project_path]/typeplate-sk";
+
 
 // Custom Author Styles
 // ====================================
 ```
 
-Authors can also take this one step further and include a custom variables file from outside the _typeplate.scss partial file. This allows authors to override the default variables set within ``_typeplate.scss``.
+Authors can also venture one step further and include a custom variables file from outside the _typeplate-sk.scss Sass partial. This allows authors to override the default variables.
 
 ```scss
-@import "[your_project_path]/typeplate-vars"; // Must come first
-@import "[your_project_path]/typeplate"; // Must follow typeplate-vars
+@import "[your_project_path]/typeplate-custom-vars"; // Must come first
+@import "[your_project_path]/typeplate-sk"; // Must follow typeplate-custom-vars
 ```
 
 ### &sect; Installation via ``.css``
 
-If the Sass version isn't your cup of tea, we've provided a CSS version. Simply place the contents of ``typeplate.css`` inside your project's stylesheet (reset style, typeplate, author styles).
+If the Sass version isn't your cup of tea, we've provided a CSS version. Simply place the contents of ``typeplate-sk.css`` inside your project's stylesheet (reset, typeplate, author styles).
 
 ###### Option #1 This method is not the best as it results in more HTTP requests.
 ```html
 <head>
     <link rel="stylesheet" href="[project_path]/css/normalize.css"><!-- Reset of your choice (optional). We like normalize even though it's not a reset -->
-    <link rel="stylesheet" href="[project_path]/css/typeplate.css"><!-- typeplate styles -->
+    <link rel="stylesheet" href="[project_path]/css/typeplate-sk.css"><!-- typeplate styles -->
     <link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet -->
 </head>
 ```
@@ -58,7 +62,7 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 
 ```html
 <head>
-    <link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet with typeplate.css inside -->
+    <link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet with typeplate-sk.css inside -->
 </head>
 ```
 
@@ -71,18 +75,18 @@ Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``
 ```scss
 @import "compass";
 @import "[your_project_path]/reset";
-@import "[root_project_path]/bower_components/typeplate/scss/typeplate";
+@import "[root_project_path]/bower_components/typeplate/scss/typeplate-sk";
 ```
 
-Since bower allows authors to keep packages and dependencies updated easily it also overrides any custom changes made to the package(s) contents served from the components directory -used by bower to organize packages. To alleviate this frustration we've provided a variable file to override the packages opinionated defaults. Simply duplicate the ``_typeplate-vars.scss`` file and include it from your own directory (most likely your sass directory where you keep all your related sass project files.)
+Since bower allows authors to keep packages and dependencies updated easily it also overrides any custom changes made to the package(s) contents served from the components directory -used by bower to organize packages. To alleviate this frustration authors can duplicate the starter kit variables to a separate file in order to override the defaults.
 
-**Sass w/custom variable overrides**
+**How to load custom variables**
 
 ```scss
 @import "compass";
 @import "[your_project_path]/reset"; // your browser reset of choice
-@import "[your_project_path]/scss/typeplate-vars"; // duplicated var file outside bower's components directory
-@import "[root_project_path]/bower_components/typeplate/scss/typeplate"; // the bower package directory and included file
+@import "[your_project_path]/scss/typeplate-custom-vars"; // custom typeplate variables file outside bower's components directory.
+@import "[root_project_path]/bower_components/typeplate/scss/typeplate-sk"; // typeplate bower package.
 ```
 
 **CSS**
@@ -92,10 +96,11 @@ You could also use the CSS version instead (btw… we don't condone this method 
 ```html
 <head>
     <link rel="stylesheet" href="[root_project_path]/bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="[root_project_path]/bower_components/typeplate/css/typeplate.css">
+    <link rel="stylesheet" href="[root_project_path]/bower_components/typeplate/css/typeplate-sk.css">
 </head>
 ```
-## Bower Installation
+
+## Installing Bower
 
 &sect; **Package Management** : [Bower](https://github.com/bower/bower)
 
@@ -112,5 +117,5 @@ With so many packages to choose from, we recommend a few libraries to use with T
 4. [Team Sass Modular Scale](https://github.com/Team-Sass/modular-scale) - Sassy Modular Scale
 
 ###### ©credits
-Typeplate &copy;2013 &bull; A [@grayghostvisuals](https://twitter.com/gryghostvisuals) and [@zakkain](https://twitter.com/zakkain) Joint™
+Typeplate Starter Kit &copy;2014 &bull; A [@grayghostvisuals](https://twitter.com/gryghostvisuals) and [@zakkain](https://twitter.com/zakkain) Joint™
 Logo Crafting by [@TommyCreenan](https://twitter.com/TommyCreenan).

@@ -11,6 +11,7 @@
    - Includes test.html for implementation studies.
    - KSS-esque commenting system where appropriate.
    - Removes .zip pkg and extra variable file.
+   - Project files now include the hyphenation '-sk'
 
 -------
 
