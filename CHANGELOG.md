@@ -10,6 +10,7 @@
    - Removes obsolete HTML tags for hyphens.
    - Includes test.html for implementation studies.
    - KSS-esque commenting system where appropriate.
+   - Removes .zip pkg and extra variable file.
 
 -------
 

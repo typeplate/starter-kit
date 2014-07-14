@@ -16,11 +16,11 @@ LICENSE URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
 // $Base
 // -------------------------------------//
 // General base styles for type
-// 
-// $typl8-custom-font			ex.) $typl8-custom-font: "Custom-Font-Name", serif;
-// $typl8-font-size				% = (16 * 112.5% = 18px)
-// $typl8-font-base 			converts % to px
-// $typl8-font-family			non-font-face stack
+//
+// $typl8-custom-font				ex.) $typl8-custom-font: "Custom-Font-Name", serif;
+// $typl8-font-size					% = (16 * 112.5% = 18px)
+// $typl8-font-base 				converts % to px
+// $typl8-font-family				non-font-face stack
 
 $typl8-serif-boolean: true !default;
 $typl8-custom-font: false !default;
@@ -35,10 +35,10 @@ $typl8-prefixes: -webkit-, -moz-, -ms-, '';
 
 // $Paragraphs
 // -------------------------------------//
-
 // Whitespace styling for paragraphs.
+// Controls paragraphs vertical whitespace.
 //
-// $typl8-paragraph-spacing		<'false' | 'true'>	controls paragraphs vertical whitespace.
+// $typl8-paragraph-spacing				<'false' | 'true'>
 
 $typl8-indent-val: 1.5em !default;
 $typl8-paragraph-spacing: false !default;
@@ -71,7 +71,7 @@ $typl8-amp-fallback: local('Georgia') !default;
 // Link single or multiple icon font sets. Requires Compass
 //
 // single icon font 			$typl8-icon-fonts: (icon-name);
-// multiple icon font 		$typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
+// multiple icon fonts 		$typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
 
 $typl8-icon-fonts: null !default;
 
@@ -101,7 +101,7 @@ $typl8-epsilon: 21 !default;
 $typl8-zeta: 18 !default;
 
 
-// $Typescale-Unit
+// $Typescale Unit
 // -------------------------------------//
 
 $typl8-typescale-unit: rem !default;
@@ -119,7 +119,7 @@ $typl8-pull-quote-color: #dc976e !default;
 // -------------------------------------//
 
 $typl8-cite-display: block !default;
-$typl8-cite-text-align: right !default;
+$typl8-cite-align: right !default;
 $typl8-cite-font-size: inherit !default;
 
 
@@ -144,10 +144,10 @@ $typl8-dropcap-line-height: 1 !default;
 $typl8-dropcap-bg: transparent !default;
 
 
+
 // ================================================================================= //
 // $Fontfaces
 // ================================================================================= //
-
 
 // $Unicode-Range-Ampersand
 // -------------------------------------//
@@ -158,9 +158,8 @@ $typl8-dropcap-bg: transparent !default;
 	unicode-range: U+0026;
 }
 
-// fallback font for unicode range
 @font-face {
-	font-family: '#{$typl8-amp-fontface}';
+	font-family: '#{$typl8-amp-fontface}'; // fallback
 	src: $typl8-amp-fallback;
 	unicode-range: U+270C;
 }
@@ -168,27 +167,22 @@ $typl8-dropcap-bg: transparent !default;
 
 // $Icon-Font-Helper
 // -------------------------------------//
-// @use:
+// Loading multiple icon fonts using Compass
+//
 // 1. Install Compass.
 // 2. Create a 'fonts' directory in the root of your project.
 // 3. Specify within your 'config.rb' the following line…
-//
-// fonts_dir = "name-of-your-fonts-directory" ( i.e. fonts_dir = "fonts" )
-
-// @example:
-// ex.1) $typl8-icon-fonts: (<icon-name>);
-// ex.2) $typl8-icon-fonts: (<icon-name1>[,<icon-name2>, <icon-name3>]);
+// 		fonts_dir = "name-of-your-fonts-directory" ( i.e. fonts_dir = "fonts" )
+// 4. Set your '$typl8-icon-fonts' var accordingly
 
 @if ($typl8-icon-fonts != null) {
 	@each $font in $typl8-icon-fonts {
-		@include font-face( $font,
-			font-files(
-				'#{$font}/#{$font}.woff',
-				'#{$font}/#{$font}.ttf',
-				'#{$font}/#{$font}.svg', svg
+		@include font-face($font, font-files(
+			'#{$font}/#{$font}.woff',
+			'#{$font}/#{$font}.ttf',
+			'#{$font}/#{$font}.svg', svg
 			),
-			'#{$font}/#{$font}.eot'
-			)
+			'#{$font}/#{$font}.eot')
 	}
 }
 
@@ -200,9 +194,9 @@ $typl8-dropcap-bg: transparent !default;
 
 // $Context Calculator
 // -------------------------------------//
-// Divide a given font-size & return relative value
+// target / context = result
 //
-// example 				p { font-size: context-calc(24, 16, px); }
+// @example 			p { font-size: context-calc(24, 16, px); }
 
 @function context-calc($scale, $base, $value) {
 	@return ($scale/$base)#{$value};
@@ -263,8 +257,8 @@ $typl8-dropcap-bg: transparent !default;
 // @notes:
 // http://caniuse.com/#search=hyphens
 // http://trentwalton.com/2011/09/07/css-hyphenation
-
-// accepted values: [ none | manual | auto ]
+//
+// @values 				[ none | manual | auto ]
 
 @mixin css-hyphens($val) {
 	@each $prefix in $typl8-prefixes {
@@ -273,7 +267,7 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
-// $Smcps
+// $Smallcaps
 // -------------------------------------//
 // @notes:
 // http://caniuse.com/#search=font-variant
@@ -296,7 +290,7 @@ $typl8-dropcap-bg: transparent !default;
 // -------------------------------------//
 // @notes:
 // firefox 17+ only (as of Feb. 2013)
-// correct x-height for fallback fonts. 
+// correct x-height for fallback fonts.
 // requires secret formula yet to be discovered.
 
 @mixin font-size-adjust($adjust-value) {
@@ -314,14 +308,12 @@ $typl8-dropcap-bg: transparent !default;
 
 // $Blockquote
 // -------------------------------------//
-// @notes:
 // "-" is your citation flourish.
-// For example:
+//
 // I always say important things because I'm so smart
 //                           - Super Important Person
-
-// @example:
-// .your-class-name { @include blockquote("-"); }
+//
+// @example 				.your-class-name { @include blockquote("-"); }
 
 @mixin blockquote($citation-flourish) {
 	p {
@@ -329,8 +321,10 @@ $typl8-dropcap-bg: transparent !default;
 			margin-bottom: -#{$typl8-line-height/2}em;
 		}
 	}
+
 	+ figcaption {
 		@extend %cite;
+
 		&:before {
 			content: $citation-flourish;
 		}
@@ -350,6 +344,7 @@ $typl8-dropcap-bg: transparent !default;
 @mixin pull-quotes($fontsize, $opacity, $color) {
 	position: relative;
 	padding: context-calc($fontsize, $fontsize, em);
+
 	&:before,
 	&:after {
 		height: context-calc($fontsize, $fontsize, em);
@@ -358,11 +353,13 @@ $typl8-dropcap-bg: transparent !default;
 		font-size: $fontsize;
 		color: $color;
 	}
+
 	&:before {
 		content: '“';
 		top:  0;
 		left: 0;
 	}
+
 	&:after {
 		content: '”';
 		bottom: 0;
@@ -371,15 +368,24 @@ $typl8-dropcap-bg: transparent !default;
 }
 
 
-// $Dropcaps
+// $Dropcap
 // -------------------------------------//
-
 // Add styling to intro paragraphs using a dropcap
 //
-// markup 			<p class="drop-cap">Lorem ipsum dolor sit amet</p>
-// example 			.dropcap { @include dropcap; }
+// @markup 				<p class="drop-cap">Lorem ipsum dolor sit amet</p>
+// @example 			.dropcap { @include dropcap; }
 
-@mixin dropcap($float-position, $font-size, $font-family, $txt-indent, $margin, $padding, $color, $line-height, $bg) {
+@mixin dropcap(
+	$float-position,
+	$font-size,
+	$font-family,
+	$txt-indent,
+	$margin,
+	$padding,
+	$color,
+	$line-height,
+	$bg
+	) {
 	&:first-letter {
 		float: $float-position;
 		margin: $margin;
@@ -441,7 +447,7 @@ $typl8-dropcap-bg: transparent !default;
 			}
 		}
 	}
-	// dictionary-style
+
 	@if $style == dictionary-style {
 		dt {
 			display: inline;
@@ -469,13 +475,12 @@ $typl8-dropcap-bg: transparent !default;
 // $Placeholders
 // ================================================================================= //
 
-
 // $Ampersands
 // -------------------------------------//
 // Call your custom ampersand on any element.
 //
-// markup 				<h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
-// example 				.ampersand { @extend %ampersand-placeholder; }
+// @markup 					<h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
+// @example 				.ampersand { @extend %ampersand-placeholder; }
 
 %ampersand-placeholder {
 	@include ampersand($typl8-amp-fontface, $typl8-amp-fontfamily);
@@ -486,10 +491,10 @@ $typl8-dropcap-bg: transparent !default;
 // -------------------------------------//
 // Style your blockquote citations
 //
-// example 					.citation { @extend %cite; }
+// @example 					.citation { @extend %cite; }
 
 %cite {
-	@include cite-style($typl8-cite-display, $typl8-cite-text-align, $typl8-cite-font-size);
+	@include cite-style($typl8-cite-display, $typl8-cite-align, $typl8-cite-font-size);
 }
 
 
@@ -499,7 +504,7 @@ $typl8-dropcap-bg: transparent !default;
 //
 // 'normal'					Lines may only break at normal word break points.
 // 'break-word'			Unbreakable words may be broken at arbitrary points.
-// example 					article { @extend %breakword; }
+// @example 					article { @extend %breakword; }
 
 %breakword {
 	word-wrap: break-word;
@@ -538,7 +543,6 @@ $typl8-dropcap-bg: transparent !default;
 // $Styles
 // ================================================================================= //
 
-
 // $Globals
 // -------------------------------------//
 
@@ -566,10 +570,10 @@ small {
 // Heading scale. Call from actual headings or other elements.
 // Special Props to Harry Roberts for this trick.
 //
-// markup 								<h6 class="giga">Awesome Headline</h6>
+// @markup 								<h6 class="giga">Awesome Headline</h6>
 // 				 								<p class="tera">A story about a dude</p>
-// optimizeLegibility 		enables ligatures and kerning
-// single line height 		fixes huge spaces when a heading wraps two lines
+// optimizeLegibility 		Enables ligatures and kerning
+// single line height 		Fixes large spaces when a heading wraps two lines
 
 %hN {
 	text-rendering: optimizeLegibility;
@@ -578,20 +582,20 @@ small {
 }
 
 // @notes:
-// Multi-dimensional array, where:
-// the first value is the name of the class.
-// The second value is the variable for size.
+// Multi-dimensional array.
+// First value is the name of the class.
+// Second value is the variable for size.
 
 $sizes:
-		tera $typl8-tera,
-		giga $typl8-giga,
-		mega $typl8-mega,
-		alpha $typl8-alpha,
-		beta $typl8-beta,
-		gamma $typl8-gamma,
-		delta $typl8-delta,
-		epsilon $typl8-epsilon,
-		zeta $typl8-zeta;
+	tera $typl8-tera,
+	giga $typl8-giga,
+	mega $typl8-mega,
+	alpha $typl8-alpha,
+	beta $typl8-beta,
+	gamma $typl8-gamma,
+	delta $typl8-delta,
+	epsilon $typl8-epsilon,
+	zeta $typl8-zeta;
 
 // @notes:
 // Sass loop to associate h1-h6 tags with their appropriate greek
@@ -600,7 +604,12 @@ $sizes:
 
 @each $size in $sizes {
 	.#{nth($size, 1)} {
-		@include type-scale(nth($size, 2), $typl8-font-base, '#{$typl8-typescale-unit}', $typl8-measure);
+		@include type-scale(
+			nth($size, 2),
+			$typl8-font-base,
+			'#{$typl8-typescale-unit}',
+			$typl8-measure
+		);
 	}
 }
 
@@ -712,10 +721,21 @@ h6 {
 // -------------------------------------//
 
 .drop-cap {
-	@include dropcap($typl8-dropcap-float-position, $typl8-dropcap-font-size, $typl8-dropcap-font-family, $typl8-dropcap-txt-indent, $typl8-dropcap-margin, $typl8-dropcap-padding, $typl8-dropcap-color, $typl8-dropcap-line-height, $typl8-dropcap-bg);
+	@include dropcap(
+		$typl8-dropcap-float-position,
+		$typl8-dropcap-font-size,
+		$typl8-dropcap-font-family,
+		$typl8-dropcap-txt-indent,
+		$typl8-dropcap-margin,
+		$typl8-dropcap-padding,
+		$typl8-dropcap-color,
+		$typl8-dropcap-line-height,
+		$typl8-dropcap-bg
+	);
 }
 
-p + .drop-cap { // combats our sibling paragraphs syling and indentation
+// combats our sibling paragraphs syling and indentation
+p + .drop-cap {
 	text-indent: 0;
 	margin-top: 0;
 }
@@ -796,7 +816,11 @@ p + .drop-cap { // combats our sibling paragraphs syling and indentation
  */
 
 .pull-quote {
-	 @include pull-quotes($typl8-pull-quote-fontsize, $typl8-pull-quote-opacity, $typl8-pull-quote-color);
+	@include pull-quotes(
+		$typl8-pull-quote-fontsize,
+		$typl8-pull-quote-opacity,
+		$typl8-pull-quote-color
+	);
 }
 
 
