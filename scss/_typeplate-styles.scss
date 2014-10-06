@@ -42,15 +42,15 @@ small {
 // Second value is the variable for size.
 
 $sizes:
-	tera $typl8-tera,
-	giga $typl8-giga,
-	mega $typl8-mega,
-	alpha $typl8-alpha,
-	beta $typl8-beta,
-	gamma $typl8-gamma,
-	delta $typl8-delta,
-	epsilon $typl8-epsilon,
-	zeta $typl8-zeta;
+	typl8-tera $typl8-tera,
+	typl8-giga $typl8-giga,
+	typl8-mega $typl8-mega,
+	typl8-alpha $typl8-alpha,
+	typl8-beta $typl8-beta,
+	typl8-gamma $typl8-gamma,
+	typl8-delta $typl8-delta,
+	typl8-epsilon $typl8-epsilon,
+	typl8-zeta $typl8-zeta;
 
 // @notes:
 // Sass loop to associate h1-h6 tags with their appropriate greek
@@ -69,32 +69,32 @@ $sizes:
 }
 
 h1 {
-	@extend .alpha;
+	@extend .typl8-alpha;
 	@extend %hN;
 }
 
 h2 {
-	@extend .beta;
+	@extend .typl8-beta;
 	@extend %hN;
 }
 
 h3 {
-	@extend .gamma;
+	@extend .typl8-gamma;
 	@extend %hN;
 }
 
 h4 {
-	@extend .delta;
+	@extend .typl8-delta;
 	@extend %hN;
 }
 
 h5 {
-	@extend .epsilon;
+	@extend .typl8-epsilon;
 	@extend %hN;
 }
 
 h6 {
-	@extend .zeta;
+	@extend .typl8-zeta;
 	@extend %hN;
 }
 
