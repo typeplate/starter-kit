@@ -45,10 +45,16 @@ gulp.task('watch', function() {
 	livereload.listen();
 });
 
-gulp.task('clean', function(cb) {
+gulp.task('cleandev', function(cb) {
 	del([
 		'dev/scss/*.css',
 		'dev/scss/*.css.map'
+	], cb);
+});
+
+gulp.task('cleandist', function(cb) {
+	del([
+		'dist/scss/styles.scss'
 	], cb);
 });
 
@@ -67,4 +73,5 @@ gulp.task('zipit', function() {
 });
 
 gulp.task('default', ['webserver', 'watch']);
-gulp.task('build', ['clean', 'zipit', 'copy']);
+gulp.task('build', ['cleandev', 'zipit', 'copy']);
+gulp.task('ship', ['cleandist']);

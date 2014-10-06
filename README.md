@@ -12,7 +12,7 @@ Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design c
 Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measely 3kb when compressed. That's really, really small.
 
 - Raw Sass = **18kb**
-- Compressed Sass = **5 KB**
+- Compressed Sass = **3 KB**
 - Raw CSS = **10 KB**
 
 ## Installation
@@ -23,7 +23,7 @@ Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just
 
 ### &sect; Installation via ``.scss @import``
 
-Simply download our ``_typeplate-sk.scss`` partial file and import from your project's primary ``.scss`` file like so:
+Simply download the Sass ``.zip`` pkg and import from your project's primary ``.scss`` file like so:
 
 ```scss
 // Imports
@@ -31,18 +31,18 @@ Simply download our ``_typeplate-sk.scss`` partial file and import from your pro
 
 @import "compass"; // Not required. For example purposes only.
 @import "[your_project_path]/reset"; // Not required. For example purposes only.
-@import "[your_project_path]/typeplate-sk";
+@import "[your_project_path]/typeplate";
 
 
 // Custom Author Styles
 // ====================================
 ```
 
-Authors can also venture one step further and include a custom variables file from outside the _typeplate-sk.scss Sass partial. This allows authors to override the default variables.
+Authors can also venture one step further and include a custom variables file in order to override the defaults we've provided.
 
 ```scss
 @import "[your_project_path]/typeplate-custom-vars"; // Must come first
-@import "[your_project_path]/typeplate-sk"; // Must follow typeplate-custom-vars
+@import "[your_project_path]/typeplate-vars"; // Must follow typeplate-custom-vars
 ```
 
 ### &sect; Installation via ``.css``
