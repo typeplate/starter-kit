@@ -62,7 +62,7 @@ gulp.task('copy', function() {
 
 gulp.task('zipit', function() {
 	return gulp.src('dev/scss/**.scss')
-		.pipe(zip('typelate-sk.zip'))
+		.pipe(zip('typeplate-sk.zip'))
 		.pipe(gulp.dest('dist'));
 });
 
