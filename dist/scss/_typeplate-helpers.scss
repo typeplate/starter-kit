@@ -1,7 +1,7 @@
 // $Dropcap
 // -------------------------------------//
 
-.drop-cap {
+.typl8-drop-cap {
 	@include dropcap(
 		$typl8-dropcap-float-position,
 		$typl8-dropcap-font-size,
@@ -17,7 +17,7 @@
 
 // @notes
 // combats our sibling paragraph syling and indentation
-p + .drop-cap {
+p + .typl8-drop-cap {
 	text-indent: 0;
 	margin-top: 0;
 }
@@ -28,7 +28,7 @@ p + .drop-cap {
 /**
  * Lining Definition Style Markup
  *
-	<dl class="lining">
+	<dl class="typl8-lining">
 		<dt><b></b></dt>
 		<dd></dd>
 	</dl>
@@ -37,14 +37,14 @@ p + .drop-cap {
  *
  */
 
-.lining {
+.typl8-lining {
 	@include definition-list-style(lining);
 }
 
 /**
  * Dictionary Definition Style Markup
  *
-	<dl class="dictionary-style">
+	<dl class="typl8-dictionary-style">
 		<dt><b></b></dt>
 		<dd></dd>
 	</dl>
@@ -53,7 +53,7 @@ p + .drop-cap {
  *
  */
 
-.dictionary-style {
+.typl8-dictionary-style {
 	@include definition-list-style(dictionary-style);
 }
 
@@ -87,7 +87,7 @@ p + .drop-cap {
 /**
  * Pull Quotes Markup
  *
-	<aside class="pull-quote">
+	<aside class="typl8-pull-quote">
 		<blockquote>
 			<p></p>
 		</blockquote>
@@ -97,7 +97,7 @@ p + .drop-cap {
  *
  */
 
-.pull-quote {
+.typl8-pull-quote {
 	@include pull-quotes(
 		$typl8-pull-quote-fontsize,
 		$typl8-pull-quote-opacity,

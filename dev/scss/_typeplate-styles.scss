@@ -10,10 +10,24 @@ html {
 }
 
 body {
-	@include css-hyphens(auto);
 	@extend %breakword;
+	@include css-hyphens(auto);
 	color: $typl8-copy-color;
 }
+
+
+// $Blockquotes
+// -------------------------------------//
+
+blockquote {
+	+ figcaption cite {
+		@extend %cite;
+	}
+}
+
+
+// $Legal Text
+// -------------------------------------//
 
 small {
 	font-size: $typl8-small-print-size;

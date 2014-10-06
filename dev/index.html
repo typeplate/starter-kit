@@ -10,27 +10,31 @@
 	<meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 	<link rel="stylesheet" href="scss/typeplate.css">
 	<style>
-	.typl8-delta {color: rgb(216, 90, 90);}
+	header[role="banner"] {text-align: center;}
+	.typl8-delta {border-bottom: 2px dotted #222; padding-bottom: 6px; color: rgb(216, 90, 90);}
 	</style>
 </head>
 <body>
 <div class="container" style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
-	
-	<h2 class="typl8-delta">Typescale</h2>
-	<hr>
-	<!-- Typescale -->
-	<h1>Heading1</h1>
-	<h2>Heading2</h2>
-	<h3>Heading3</h3>
-	<h4>Heading4</h4>
-	<h5>Heading5</h5>
-	<h6>Heading6</h6>
 
-	<h2 class="typl8-delta">Paragraphs</h2>
-	<hr>
+	<header role="banner">
+		<a href="//typeplate.com"><img src="http://typeplate.com/img/logo.png" alt="typeplate logo" width="116" height="116"></a>
+	</header>
+
+	<!-- Typescale -->	
+	<h2 class="typl8-delta">Typescale</h2>
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+	<h4>Heading 4</h4>
+	<h5>Heading 5</h5>
+	<h6>Heading 6</h6>
+
 	<!-- Paragraph Styling -->
+	<h2 class="typl8-delta">Paragraphs</h2>
 	<h1>A really long title about some stuff that I want to talk about.</h1>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -41,27 +45,24 @@
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-	<h2 class="typl8-delta">Pull Quotes</h2>
-	<hr>
 	<!-- Pull Quote -->
-	<aside class="pull-quote">
+	<h2 class="typl8-delta">Pull Quotes</h2>
+	<aside class="typl8-pull-quote">
 	  <blockquote>
 	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aliquam mollitia ipsa atque ex placeat laboriosam ea animi ipsum dolore dolorem doloremque qui ratione voluptates totam ullam magni harum facilis.</p>
 	  </blockquote>
 	</aside>
 
-	<h2 class="typl8-delta">Figures</h2>
-	<hr>
 	<!-- Figure -->
+	<h2 class="typl8-delta">Figures</h2>
 	<figure>
 		<figcaption>
 		<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
 		</figcaption>
 	</figure>
 
-	<h2 class="typl8-delta">Blockquotes</h2>
-	<hr>
 	<!-- Blockquote -->
+	<h2 class="typl8-delta">Blockquotes</h2>
 	<figure>
 		<blockquote cite="">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, saepe, vero neque ipsa fuga minus necessitatibus dolorum sequi magni cumque est pariatur aspernatur eius reprehenderit sapiente. Quam pariatur eius eveniet!</p>
@@ -74,9 +75,8 @@
 		</figcaption>
 	</figure>
 
-	<h2 class="typl8-delta">Footnotes</h2>
-	<hr>
 	<!-- Footnote -->
+	<h2 class="typl8-delta">Footnotes</h2>
 	<article>
 		<h3>Footnotes Rule Dawg!</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, <sup><a href="#fn-itemX" id="fn-returnX">1</a></sup> dolorum, tempora, molestias, iste quibusdam voluptatem voluptas eligendi odio mollitia nobis rem a autem perspiciatis et aut aliquid eveniet est quos.</p>
@@ -87,32 +87,28 @@
 		</footer>
 	</article>
 
-	<h2 class="typl8-delta">Definitions</h2>
-	<hr>
 	<!-- Definition Lists -->
-	<dl class="dictionary-style">
+	<h2 class="typl8-delta">Definitions</h2>
+	<dl class="typl8-dictionary-style">
 		<dt><b>Term Dictionary Style</b></dt>
 		<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, excepturi, ratione, ipsam tempora alias ducimus odio incidunt illo quas rerum consectetur a numquam deserunt blanditiis possimus labore totam officia tenetur.</dd>
 	</dl>
 
-	<dl class="lining">
+	<dl class="typl8-lining">
 		<dt><b>Term Lining Style</b></dt>
 		<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, ad unde corporis suscipit et. Deleniti, eum, facere, ratione nam dignissimos necessitatibus explicabo excepturi autem a praesentium similique temporibus repellat quidem.</dd>
 	</dl>
 
-	<h2 class="typl8-delta">Dropcap</h2>
-	<hr>
 	<!-- Dropcap -->
-	<p class="drop-cap">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+	<h2 class="typl8-delta">Dropcap</h2>
+	<p class="typl8-drop-cap">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-	<h2 class="typl8-delta">Abbreviations</h2>
-	<hr>
 	<!-- Abbreviations -->
-	abbreviations like <abbr title="Adobe Type Manager">atm</abbr> look like they should.
+	<h2 class="typl8-delta">Abbreviations</h2>
+	<p>abbreviations like <abbr title="Adobe Type Manager">atm</abbr> look like they should.</p>
 
-	<h2 class="typl8-delta">Small</h2>
-	<hr>
 	<!-- Copyright Text -->
+	<h2 class="typl8-delta">Small</h2>
 	<footer>
 		<small>This code is ©2014 Typeplate and is in a small tag</small>
 	</footer>

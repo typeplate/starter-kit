@@ -56,7 +56,7 @@ $typl8-amp-fallback: local('Georgia') !default;
 // Link single or multiple icon font sets. Requires Compass
 //
 // single icon font             $typl8-icon-fonts: (icon-name);
-// multiple icon fonts      $typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
+// multiple icon fonts          $typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
 
 $typl8-icon-fonts: null !default;
 
@@ -65,15 +65,15 @@ $typl8-icon-fonts: null !default;
 // -------------------------------------//
 // Greek heading names and scale using base font-size
 //
-// tera                    117 = 18 × 6.5
-// giga                     90 = 18 × 5
-// mega                     72 = 18 × 4
-// alpha                    60 = 18 × 3.3333
-// beta                     48 = 18 × 2.6667
-// gamma                    36 = 18 × 2
-// delta                    24 = 18 × 1.3333
-// epsilon                  21 = 18 × 1.1667
-// zeta                     18 = 18 × 1
+// typl8-tera                    117 = 18 × 6.5
+// typl8-giga                     90 = 18 × 5
+// typl8-mega                     72 = 18 × 4
+// typl8-alpha                    60 = 18 × 3.3333
+// typl8-beta                     48 = 18 × 2.6667
+// typl8-gamma                    36 = 18 × 2
+// typl8-delta                    24 = 18 × 1.3333
+// typl8-epsilon                  21 = 18 × 1.1667
+// typl8-zeta                     18 = 18 × 1
 
 $typl8-tera: 117 !default;
 $typl8-giga: 90 !default;
