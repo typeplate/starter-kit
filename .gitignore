@@ -2,5 +2,6 @@
 node_modules/
 .DS_Store
 
-scss/*.css
-scss/*.css.map
+**/scss/*.css
+**/scss/*.css.map
+
