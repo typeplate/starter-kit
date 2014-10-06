@@ -1,0 +1,173 @@
+// $Global
+// -------------------------------------//
+
+html {
+	@if $typl8-custom-font {
+		font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-custom-font, $typl8-font-family;
+	} @else {
+		font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-font-family;
+	}
+}
+
+body {
+	@include css-hyphens(auto);
+	@extend %breakword;
+	color: $typl8-copy-color;
+}
+
+small {
+	font-size: $typl8-small-print-size;
+}
+
+
+// $Headings
+// -------------------------------------//
+// Heading scale. Call from actual headings or other elements.
+// Special Props to Harry Roberts for this trick.
+//
+// @markup                                  <h6 class="giga">Awesome Headline</h6>
+//                                                  <p class="tera">A story about a dude</p>
+// optimizeLegibility           Enables ligatures and kerning
+// single line height           Fixes large spaces when a heading wraps two lines
+
+%hN {
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+	margin-top: 0;
+}
+
+// @notes
+// Multi-dimensional array.
+// First value is the name of the class.
+// Second value is the variable for size.
+
+$sizes:
+	tera $typl8-tera,
+	giga $typl8-giga,
+	mega $typl8-mega,
+	alpha $typl8-alpha,
+	beta $typl8-beta,
+	gamma $typl8-gamma,
+	delta $typl8-delta,
+	epsilon $typl8-epsilon,
+	zeta $typl8-zeta;
+
+// @notes:
+// Sass loop to associate h1-h6 tags with their appropriate greek
+// heading based on a modular scale. for each size in the scale,
+// create a class name.
+
+@each $size in $sizes {
+	.#{nth($size, 1)} {
+		@include type-scale(
+			nth($size, 2),
+			$typl8-font-base,
+			'#{$typl8-typescale-unit}',
+			$typl8-measure
+		);
+	}
+}
+
+h1 {
+	@extend .alpha;
+	@extend %hN;
+}
+
+h2 {
+	@extend .beta;
+	@extend %hN;
+}
+
+h3 {
+	@extend .gamma;
+	@extend %hN;
+}
+
+h4 {
+	@extend .delta;
+	@extend %hN;
+}
+
+h5 {
+	@extend .epsilon;
+	@extend %hN;
+}
+
+h6 {
+	@extend .zeta;
+	@extend %hN;
+}
+
+
+// $Parargraphs
+// -------------------------------------//
+
+p {
+	margin: auto auto $typl8-indent-val;
+	@if $typl8-paragraph-spacing == false {
+		& + p {
+			text-indent: $typl8-indent-val;
+			margin-top: -$typl8-indent-val;
+		}
+	}
+}
+
+
+// $Hyphenation
+// -------------------------------------//
+// @notes
+// http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+	@include css-hyphens(none);
+}
+
+
+// $Codeblocks
+// -------------------------------------//
+
+pre {
+	@include white-space(pre);
+
+	code {
+		@extend %normal-wrap;
+		@include white-space(pre-wrap);
+	}
+}
+
+code {
+	@include white-space(pre);
+	font-family: monospace;
+}
+
+
+// $Smallcaps
+// -------------------------------------//
+
+abbr {
+	@include smallcaps($typl8-smcps-color, $typl8-smcps-weight);
+	&[title]:hover {
+		cursor: help;
+	}
+}
+
+
+// $Heading Colors
+// -------------------------------------//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $typl8-heading-color;
+}

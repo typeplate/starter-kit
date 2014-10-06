@@ -1,6 +1,6 @@
 http_path = "/"
-css_dir = "scss"
-sass_dir = "scss"
+css_dir = "dev/scss"
+sass_dir = "dev/scss"
 
 output_style = :compressed
 environment = :production

@@ -66,47 +66,6 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 </head>
 ```
 
-### &sect; Installation via Bower
-
-Yup that&rsquo;s right! We&rsquo;re in the bower package registry. Simply run ``bower install typeplate-starter-kit`` for the CSS, Sass versions and watch the magic happen. This is an example of how to include either the CSS or Sass version in your project.
-
-**Sass**
-
-```scss
-@import "compass";
-@import "[your_project_path]/reset";
-@import "[root_project_path]/bower_components/typeplate/scss/typeplate-sk";
-```
-
-Since bower allows authors to keep packages and dependencies updated easily it also overrides any custom changes made to the package(s) contents served from the components directory -used by bower to organize packages. To alleviate this frustration authors can duplicate the starter kit variables to a separate file in order to override the defaults.
-
-**How to load custom variables**
-
-```scss
-@import "compass";
-@import "[your_project_path]/reset"; // your browser reset of choice
-@import "[your_project_path]/scss/typeplate-custom-vars"; // custom typeplate variables file outside bower's components directory.
-@import "[root_project_path]/bower_components/typeplate/scss/typeplate-sk"; // typeplate bower package.
-```
-
-**CSS**
-
-You could also use the CSS version instead (btw… we don't condone this method depicted below. In reality you should copy the contents of the CSS file and paste the contents in the top of your projects stylesheet):
-
-```html
-<head>
-    <link rel="stylesheet" href="[root_project_path]/bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="[root_project_path]/bower_components/typeplate/css/typeplate-sk.css">
-</head>
-```
-
-## Installing Bower
-
-&sect; **Package Management** : [Bower](https://github.com/bower/bower)
-
-In order to install bower you must first have [Node](http://nodejs.org) and [npm](https://npmjs.org) installed on your machine. Once [Node](http://nodejs.org) and [npm](https://npmjs.org) are installed simply run the command below  (which works on both Windows/Mac and one of the reasons why we chose it).
-
-    npm install bower -g
 
 ## &sect; What Else Is There?
 With so many packages to choose from, we recommend a few libraries to use with Typeplate to compliment. Bon Appetite!

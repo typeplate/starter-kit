@@ -9,46 +9,62 @@
 // - http://markgoodyear.com/2014/01/getting-started-with-gulp
 // =======================================================
 
-var gulp         = require('gulp'),
-		compass      = require('gulp-compass'),
-		livereload   = require('gulp-livereload'),
-		webserver    = require('gulp-webserver'),
-		zip          = require('gulp-zip');
+var gulp       = require('gulp'),
+		compass    = require('gulp-compass'),
+		livereload = require('gulp-livereload'),
+		webserver  = require('gulp-webserver'),
+		zip        = require('gulp-zip'),
+		del        = require('del');
 
 
 gulp.task('styles', function() {
-	return gulp.src('scss/typeplate-sk.scss')
+	return gulp.src('dev/scss/**.scss')
 		.pipe(compass({
 			config_file: 'config.rb',
 			sourcemap: true,
 			debug : true,
-			css: 'scss',
-			sass: 'scss'
+			css: 'dev/scss',
+			sass: 'dev/scss'
 		}))
-		.pipe(gulp.dest('scss'));
+		.pipe(gulp.dest('dev/scss'));
 });
 
 gulp.task('webserver', function() {
-	gulp.src('.')
+	gulp.src('dev')
 		.pipe(webserver({
-			path: '/',
+			port: 9000,
+			path: 'dev/',
 			livereload: true,
 			directoryListing: false,
 			open: true
 		}));
 });
 
-gulp.task('zipit', function () {
-	return gulp.src('scss/**.scss')
-		.pipe(zip('typlate-starter-kit.zip'))
-		.pipe(gulp.dest('dist'));
-});
-
 gulp.task('watch', function() {
-	gulp.watch('scss/**.scss', ['styles']);
+	gulp.watch('dev/scss/**.scss', ['styles']);
 	livereload.listen();
 });
 
+gulp.task('clean', function(cb) {
+	del([
+		'dev/scss/*.css',
+		'dev/scss/*.css.map'
+	], cb);
+});
+
+gulp.task('copy', function() {
+	gulp.src('dev/css/**')
+		.pipe(gulp.dest('dist/css'));
+
+	gulp.src('dev/scss/**')
+		.pipe(gulp.dest('dist/scss'));
+});
+
+gulp.task('zipit', function() {
+	return gulp.src('dev/scss/**.scss')
+		.pipe(zip('typelate-sk.zip'))
+		.pipe(gulp.dest('dist'));
+});
 
 gulp.task('default', ['webserver', 'watch']);
-gulp.task('zip', ['zipit']);
+gulp.task('build', ['clean', 'zipit', 'copy']);
