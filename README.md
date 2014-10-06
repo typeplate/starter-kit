@@ -23,7 +23,10 @@ Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just
 
 ### &sect; Installation via ``.scss @import``
 
-Simply download the Sass ``.zip`` pkg and import from your project's primary ``.scss`` file like so:
+1. Download the Sass ``.zip`` pkg
+2. Unzip
+3. Place the new directory from the ``.zip`` into your project's Sass directory
+4. Import from your project's primary ``.scss`` file like so:
 
 ```scss
 // Imports
@@ -31,7 +34,7 @@ Simply download the Sass ``.zip`` pkg and import from your project's primary ``.
 
 @import "compass"; // Not required. For example purposes only.
 @import "[your_project_path]/reset"; // Not required. For example purposes only.
-@import "[your_project_path]/typeplate";
+@import "[your_project_path]/typeplate-sk/typeplate";
 
 
 // Custom Author Styles
@@ -66,6 +69,20 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 </head>
 ```
 
+## Contributing
+
+In order to contribute you need the confidence to work with Gulp and the CLI. A couple useful tasks to list are:
+
+```bash
+# Watch and compile Sass
+gulp
+
+# Output for dist directory
+gulp build
+
+# Final prep for deployment
+gulp ship
+```
 
 ## &sect; What Else Is There?
 With so many packages to choose from, we recommend a few libraries to use with Typeplate to compliment. Bon Appetite!
