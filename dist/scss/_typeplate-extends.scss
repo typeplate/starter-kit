@@ -3,9 +3,9 @@
 // Call your custom ampersand on any element.
 //
 // @markup                  <h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
-// @example                 .ampersand { @extend %ampersand-placeholder; }
+// @example                 .ampersand { @extend %typl8-amp-placeholder; }
 
-%ampersand-placeholder {
+%typl8-amp-placeholder {
 	@include ampersand($typl8-amp-fontface, $typl8-amp-fontfamily);
 }
 
@@ -14,9 +14,9 @@
 // -------------------------------------//
 // Style your blockquote citations
 //
-// @example                     .citation { @extend %cite; }
+// @example                     .citation { @extend %typl8-cite; }
 
-%cite {
+%typl8-cite {
 	@include cite-style($typl8-cite-display, $typl8-cite-align, $typl8-cite-font-size);
 }
 
@@ -26,18 +26,19 @@
 // Control word wrapping and breaks in your text.
 //
 // 'normal'                     Lines may only break at normal word break points.
-// 'break-word'             Unbreakable words may be broken at arbitrary points.
-// @example                     article { @extend %breakword; }
+// 'break-word'                 Unbreakable words may be broken at arbitrary points.
+//
+// @example                     article { @extend %typl8-breakword; }
 
-%breakword {
+%typl8-breakword {
 	word-wrap: break-word;
 }
 
-%normal-wrap {
+%typl8-normal-wrap {
 	word-wrap: normal;
 }
 
-%inherit-wrap {
+%typl8-inherit-wrap {
 	word-wrap: auto;
 }
 
@@ -46,16 +47,16 @@
 // -------------------------------------//
 // Control OpenType feature settings where desired.
 //
-// smallcaps                body { @extend %font-feature--smcp; }
-// text figures             body { @extend %font-feature--onum; }
+// smallcaps                body { @extend %typl8-ot--smcp; }
+// text figures             body { @extend %typl8-ot--onum; }
 
-%font-feature--smcp {
+%typl8-ot--smcp {
 	@each $prefix in $typl8-prefixes {
 		#{$prefix}font-feature-settings: "smcp";
 	}
 }
 
-%font-feature--onum {
+%typl8-ot--onum {
 	@each $prefix in $typl8-prefixes {
 		#{$prefix}font-feature-settings: 'onum';
 	}

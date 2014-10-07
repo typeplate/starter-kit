@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	@extend %breakword;
+	@extend %typl8-breakword;
 	@include css-hyphens(auto);
 	color: $typl8-copy-color;
 }
@@ -21,7 +21,7 @@ body {
 
 blockquote {
 	+ figcaption cite {
-		@extend %cite;
+		@extend %typl8-cite;
 	}
 }
 
@@ -152,7 +152,7 @@ pre {
 	@include white-space(pre);
 
 	code {
-		@extend %normal-wrap;
+		@extend %typl8-normal-wrap;
 		@include white-space(pre-wrap);
 	}
 }
