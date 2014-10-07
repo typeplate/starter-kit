@@ -7,7 +7,7 @@
    - Issue 16: Namespacing. Helps to avoid collisions w/other libs and frameworks.
    - Vendor prefix Sass loop for OpenType @mixins.
    - Updates CSS port to match Sass v2.0.0 port.
-   - Closes Custom build of typeplate #26. Separates into Sass partials.
+   - Issue 26: Custom build of Typeplate. Separates into Sass partials.
    - Removes obsolete HTML tags for hyphens.
    - Removes hypens on form inputs due to a bug in iOS
    - Includes markup file for implementation studies.
