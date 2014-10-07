@@ -83,6 +83,9 @@ $ bundle install
 # Watch and compile Sass
 $ gulp
 
+# Prepare Output for dist directory
+$ gulp prep
+
 # Output for dist directory
 $ gulp build
 

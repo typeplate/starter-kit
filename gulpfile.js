@@ -73,5 +73,6 @@ gulp.task('zipit', function() {
 });
 
 gulp.task('default', ['webserver', 'watch']);
-gulp.task('build', ['cleandev', 'zipit', 'copy']);
+gulp.task('prep', ['cleandev']);
+gulp.task('build', ['zipit', 'copy']);
 gulp.task('ship', ['cleandist']);
