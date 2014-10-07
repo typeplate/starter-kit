@@ -13,7 +13,6 @@
    - Includes markup file for implementation studies.
    - KSS-esque commenting system.
    - Removes custom variable file.
-   - Project files now include the hyphenation '-sk'
 
 -------
 
