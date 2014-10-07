@@ -71,17 +71,18 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 
 ## Contributing
 
-In order to contribute you need the confidence to work with Gulp and the CLI. A couple useful tasks to list are:
+In order to contribute you need the confidence to work with Gulp and the CLI. Your tasks in order are as follows:
+
 
 ```bash
 # Watch and compile Sass
-gulp
+$ gulp
 
 # Output for dist directory
-gulp build
+$ gulp build
 
 # Final prep for deployment
-gulp ship
+$ gulp ship
 ```
 
 ## &sect; What Else Is There?
