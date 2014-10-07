@@ -1,16 +1,18 @@
 **Sass & CSS v2.0.0:**
 
-   date: 2014-07-13
+   date: 2014-10-07
 
    changes:
 
    - Issue 16: Namespacing. Helps to avoid collisions w/other libs and frameworks.
    - Vendor prefix Sass loop for OpenType @mixins.
    - Updates CSS port to match Sass v2.0.0 port.
+   - Closes Custom build of typeplate #26. Separates into Sass partials.
    - Removes obsolete HTML tags for hyphens.
-   - Includes test.html for implementation studies.
-   - KSS-esque commenting system where appropriate.
-   - Removes .zip pkg and extra variable file.
+   - Removes hypens on form inputs due to a bug in iOS
+   - Includes markup file for implementation studies.
+   - KSS-esque commenting system.
+   - Removes custom variable file.
    - Project files now include the hyphenation '-sk'
 
 -------
@@ -64,7 +66,7 @@
 -------
 
 **v1.0.2:**
-	
+   
    date: 2013-05-11
 
    changes:
