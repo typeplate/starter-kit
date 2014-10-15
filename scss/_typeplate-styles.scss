@@ -16,6 +16,35 @@ body {
 }
 
 
+// $Headings
+// -------------------------------------//
+
+@include heading-scale;
+@include headings;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $typl8-heading-color;
+}
+
+
+// $Parargraphs
+// -------------------------------------//
+
+p {
+	margin: auto auto $typl8-indent-val;
+	@if $typl8-paragraph-spacing == false {
+		& + p {
+			text-indent: $typl8-indent-val;
+			margin-top: -$typl8-indent-val;
+		}
+	}
+}
+
 // $Blockquotes
 // -------------------------------------//
 
@@ -31,40 +60,6 @@ blockquote {
 
 small {
 	font-size: $typl8-small-print-size;
-}
-
-
-// $Headings
-// -------------------------------------//
-// Heading scale. Call from actual headings or other elements.
-// Special Props to Harry Roberts for this trick.
-//
-// @markup                      <h6 class="giga">Awesome Headline</h6>
-//                              <p class="tera">A story about a dude</p>
-// optimizeLegibility           Enables ligatures and kerning
-// single line height           Fixes large spaces when a heading wraps two lines
-
-%hN {
-	text-rendering: optimizeLegibility;
-	line-height: 1;
-	margin-top: 0;
-}
-
-@include headings-scale;
-@include headings;
-
-
-// $Parargraphs
-// -------------------------------------//
-
-p {
-	margin: auto auto $typl8-indent-val;
-	@if $typl8-paragraph-spacing == false {
-		& + p {
-			text-indent: $typl8-indent-val;
-			margin-top: -$typl8-indent-val;
-		}
-	}
 }
 
 
@@ -112,17 +107,4 @@ abbr {
 	&[title]:hover {
 		cursor: help;
 	}
-}
-
-
-// $Heading Colors
-// -------------------------------------//
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: $typl8-heading-color;
 }
