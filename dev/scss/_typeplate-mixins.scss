@@ -29,6 +29,33 @@
 }
 
 
+// $Headings
+// https://github.com/typeplate/starter-kit/issues/27
+// -------------------------------------//
+
+@mixin headings-scale() {
+  @each $name, $size in $typl8-scale {
+    .#{$name} {
+      @extend %hN;
+      @include type-scale(
+        $size,
+        $typl8-font-base,
+        '#{$typl8-typescale-unit}',
+        $typl8-measure
+      );
+    }
+  }
+}
+
+@mixin headings() {
+  @each $h, $size in $typl8-headings {
+    #{$h} {
+      @extend .#{$size};
+    }
+  }
+}
+
+
 // $Hypens
 // -------------------------------------//
 // @notes
@@ -100,7 +127,7 @@
 	}
 
 	+ figcaption {
-		@extend %cite;
+		@extend %typl8-cite;
 
 		&:before {
 			content: $citation-flourish;
