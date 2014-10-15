@@ -1,8 +1,3 @@
-// ================================================================================= //
-// Mixins
-// ================================================================================= //
-
-
 // $Typescale
 // -------------------------------------//
 
@@ -32,27 +27,39 @@
 // $Headings
 // https://github.com/typeplate/starter-kit/issues/27
 // -------------------------------------//
+// Props to Harry Roberts for this trick.
+//
+// @notes
+// optimizeLegibility           Enables ligatures and kerning
+// single line height           Fixes large spaces when a heading wraps two lines
 
-@mixin headings-scale() {
-  @each $name, $size in $typl8-scale {
-    .#{$name} {
-      @extend %hN;
-      @include type-scale(
-        $size,
-        $typl8-font-base,
-        '#{$typl8-typescale-unit}',
-        $typl8-measure
-      );
-    }
-  }
+%typl8-hN {
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+	margin-top: 0;
+}
+
+@mixin heading-scale() {
+	@each $name, $size in $typl8-scale {
+		.#{$name} {
+			@extend %typl8-hN;
+			@include type-scale(
+				$size,
+				$typl8-font-base,
+				'#{$typl8-typescale-unit}',
+				$typl8-measure
+			);
+		}
+	}
 }
 
 @mixin headings() {
-  @each $h, $size in $typl8-headings {
-    #{$h} {
-      @extend .#{$size};
-    }
-  }
+	@each $h, $size in $typl8-headings {
+		#{$h} {
+			@extend .#{$size};
+			color: $typl8-heading-color;
+		}
+	}
 }
 
 
