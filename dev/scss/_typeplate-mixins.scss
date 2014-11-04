@@ -183,8 +183,8 @@
 // -------------------------------------//
 // Add styling to intro paragraphs using a dropcap
 //
-// @markup              <p class="drop-cap">Lorem ipsum dolor sit amet</p>
-// @example             .dropcap { @include dropcap; }
+// @markup              <p class="typl8-drop-cap">Lorem ipsum dolor sit amet</p>
+// @example             .dropcap { @include typl8-dropcap; }
 
 @mixin typl8-dropcap(
   $float-position,
