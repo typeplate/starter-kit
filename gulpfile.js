@@ -64,6 +64,9 @@ gulp.task('copy', function() {
 
   gulp.src('dev/scss/**')
     .pipe(gulp.dest('dist/scss'));
+
+  gulp.src('license.txt')
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('zipit', function() {
