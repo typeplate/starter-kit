@@ -68,7 +68,7 @@ gulp.task('copy', function() {
   gulp.src('license.txt')
     .pipe(gulp.dest('dist'));
 
-  gulp.src('bower.json')
+  gulp.src('dev/bower.json')
     .pipe(gulp.dest('dist'));
 
   gulp.src('README.md')
