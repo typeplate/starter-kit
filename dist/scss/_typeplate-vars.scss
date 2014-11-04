@@ -14,8 +14,8 @@ $typl8-font-weight: normal !default;
 $typl8-line-height: 1.65 !default;
 $typl8-font-size: 112.5 !default;
 $typl8-font-base: 16 * ($typl8-font-size/100) !default;
-$typl8-measure: $typl8-font-base * $typl8-line-height;
-$typl8-prefixes: -webkit-, -moz-, -ms-, '';
+$typl8-measure: $typl8-font-base * $typl8-line-height !default;
+$typl8-prefixes: -webkit-, -moz-, -ms-, '' !default;
 
 
 // $Paragraphs
@@ -76,24 +76,24 @@ $typl8-icon-fonts: null !default;
 // typl8-zeta                     18 = 18 × 1
 
 $typl8-scale: (
-	typl8-tera: 117,
-	typl8-giga: 90,
-	typl8-mega: 72,
-	typl8-alpha: 60,
-	typl8-beta: 48,
-	typl8-gamma: 36,
-	typl8-delta: 24,
-	typl8-epsilon: 21,
-	typl8-zeta: 18,
+  typl8-tera: 117,
+  typl8-giga: 90,
+  typl8-mega: 72,
+  typl8-alpha: 60,
+  typl8-beta: 48,
+  typl8-gamma: 36,
+  typl8-delta: 24,
+  typl8-epsilon: 21,
+  typl8-zeta: 18,
 ) !default;
 
 $typl8-headings: (
-	h1: typl8-mega,
-	h2: typl8-alpha,
-	h3: typl8-beta,
-	h4: typl8-gamma,
-	h5: typl8-delta,
-	h6: typl8-zeta
+  h1: typl8-mega,
+  h2: typl8-alpha,
+  h3: typl8-beta,
+  h4: typl8-gamma,
+  h5: typl8-delta,
+  h6: typl8-zeta
 ) !default;
 
 

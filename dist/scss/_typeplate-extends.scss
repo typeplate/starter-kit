@@ -6,7 +6,7 @@
 // @example                 .ampersand { @extend %typl8-amp-placeholder; }
 
 %typl8-amp-placeholder {
-	@include ampersand($typl8-amp-fontface, $typl8-amp-fontfamily);
+  @include typl8-ampersand($typl8-amp-fontface, $typl8-amp-fontfamily);
 }
 
 
@@ -17,7 +17,7 @@
 // @example                     .citation { @extend %typl8-cite; }
 
 %typl8-cite {
-	@include cite-style($typl8-cite-display, $typl8-cite-align, $typl8-cite-font-size);
+  @include typl8-cite-style($typl8-cite-display, $typl8-cite-align, $typl8-cite-font-size);
 }
 
 
@@ -31,15 +31,15 @@
 // @example                     article { @extend %typl8-breakword; }
 
 %typl8-breakword {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 %typl8-normal-wrap {
-	word-wrap: normal;
+  word-wrap: normal;
 }
 
 %typl8-inherit-wrap {
-	word-wrap: auto;
+  word-wrap: auto;
 }
 
 
@@ -52,13 +52,13 @@
 // text figures             body { @extend %typl8-ot--onum; }
 
 %typl8-ot--smcp {
-	@each $prefix in $typl8-prefixes {
-		#{$prefix}font-feature-settings: "smcp";
-	}
+  @each $prefix in $typl8-prefixes {
+    #{$prefix}font-feature-settings: "smcp";
+  }
 }
 
 %typl8-ot--onum {
-	@each $prefix in $typl8-prefixes {
-		#{$prefix}font-feature-settings: 'onum';
-	}
+  @each $prefix in $typl8-prefixes {
+    #{$prefix}font-feature-settings: 'onum';
+  }
 }
