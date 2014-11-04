@@ -4,21 +4,21 @@
 @mixin typl8-typescale($scale, $base, $value, $measure:"") {
   @if $value == rem {
     font-size: $scale#{px};
-    font-size: context-calc($scale, $base, $value);
+    font-size: typl8-context-calc($scale, $base, $value);
   } @else if $value == em {
-    font-size: context-calc($scale, $base, $value);
+    font-size: typl8-context-calc($scale, $base, $value);
   } @else {
     font-size: $scale#{px};
   }
 
   @if $measure != "" {
     @if $value == rem {
-      margin-bottom: measure-margin($scale, $measure, $value: px);
-      margin-bottom: measure-margin($scale, $measure, $value);
+      margin-bottom: typl8-measure-margin($scale, $measure, $value: px);
+      margin-bottom: typl8-measure-margin($scale, $measure, $value);
     } @else if $value == em {
-      margin-bottom: measure-margin($scale, $measure, $value: em);
+      margin-bottom: typl8-measure-margin($scale, $measure, $value: em);
     } @else {
-      margin-bottom: measure-margin($scale, $measure, $value);
+      margin-bottom: typl8-measure-margin($scale, $measure, $value);
     }
   }
 }
@@ -124,7 +124,7 @@
 // I always say important things because I'm so smart
 //                           - Super Important Person
 //
-// @example                 .your-class-name { @include blockquote("-"); }
+// @example                 .your-class-name { @include typl8-blockquote("-"); }
 
 @mixin typl8-blockquote($citation-flourish) {
   p {
@@ -154,11 +154,11 @@
 
 @mixin typl8-pull-quotes($fontsize, $opacity, $color) {
   position: relative;
-  padding: context-calc($fontsize, $fontsize, em);
+  padding: typl8-context-calc($fontsize, $fontsize, em);
 
   &:before,
   &:after {
-    height: context-calc($fontsize, $fontsize, em);
+    height: typl8-context-calc($fontsize, $fontsize, em);
     opacity: $opacity;
     position: absolute;
     font-size: $fontsize;

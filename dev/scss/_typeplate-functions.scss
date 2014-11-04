@@ -4,7 +4,7 @@
 //
 // @example             p { font-size: context-calc(24, 16, px); }
 
-@function context-calc($scale, $base, $value) {
+@function typl8-context-calc($scale, $base, $value) {
   @return ($scale/$base)#{$value};
 }
 
@@ -13,7 +13,7 @@
 // -------------------------------------//
 // divide 1 unit of measure by given font-size & return relative value
 
-@function measure-margin($scale, $measure, $value) {
+@function typl8-measure-margin($scale, $measure, $value) {
   $pixelValue: $measure/$scale;
   $remValue: $pixelValue * $typl8-font-base;
 
