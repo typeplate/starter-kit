@@ -23,10 +23,9 @@ Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just
 
 ### &sect; Installation via ``.scss @import``
 
-1. Download the Sass ``.zip`` pkg
-2. Unzip
-3. Place the new directory from the ``.zip`` into your project's Sass directory
-4. Import from your project's primary ``.scss`` file like so:
+1. Download and unzip the [Sass ``.zip`` pkg](http://github.com/typeplate/starter-kit/blob/development/typeplate-sk.zip?raw=true).
+2. Place the new directory from the ``.zip`` into your project's Sass directory
+3. Import from your project's primary ``.scss`` file like so:
 
 ```scss
 // Imports
@@ -71,7 +70,7 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 
 ## Contributing
 
-In order to contribute you need the confidence to work with Gulp, the CLI and Ruby Gems. Our main work is done on the development branch and distributed on master. Your tasks in order are as follows:
+In order to contribute you need the confidence to work with Gulp, the CLI and Ruby Gems. Our main work is done on the [development branch](https://github.com/typeplate/starter-kit/tree/development) and distributed on master. Gulp tasks are as follows:
 
 ```bash
 # Install Gulp dependencies
@@ -83,10 +82,10 @@ $ bundle install
 # Watch and compile Sass
 $ gulp
 
-# Prepare Output for dist directory
+# Prepare output for dist directory
 $ gulp prep
 
-# Output for dist directory
+# Place output for dist directory
 $ gulp build
 
 # Final prep for deployment
