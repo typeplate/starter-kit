@@ -67,12 +67,15 @@ gulp.task('copy', function() {
 
   gulp.src('license.txt')
     .pipe(gulp.dest('dist'));
+
+  gulp.src('README.md')
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('zipit', function() {
   return gulp.src('dev/scss/**.scss')
     .pipe(zip('typeplate-sk.zip'))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('default', ['webserver', 'watch']);
