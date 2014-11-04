@@ -1,19 +1,21 @@
 **Sass & CSS v2.0.0:**
 
-   date: 2014-10-07
+   date: 2014-11-04
 
    changes:
 
-   - Issue 16: Namespacing. Helps to avoid collisions w/other libs and frameworks.
-   - Vendor prefix Sass loop for OpenType @mixins.
-   - Updates CSS port to match Sass v2.0.0 port.
-   - Issue 26: Custom build of Typeplate. Separates into Sass partials.
+   - [Issue 16](https://github.com/typeplate/starter-kit/issues/16): Namespacing. Helps to avoid collisions w/other libs and frameworks.
+   - [Issue 26](https://github.com/typeplate/starter-kit/issues/26): Separates Typeplate into Sass partials.
+   - [Issue 27](https://github.com/typeplate/starter-kit/issues/27) : Headings use Sass maps and allow for use cases where authors need to adjust heading size within ``@media`` queries.
+   - Vendor prefix Sass loop for OpenType ``@mixins``.
+   - Updates CSS port to v2.0.0.
    - Removes obsolete HTML tags for hyphens.
-   - Removes hypens on form inputs due to a bug in iOS
-   - Includes markup file for implementation studies.
+   - Removes hypens on form inputs.
+   - Includes markup file for implementation studies and ease the pain of local development.
    - KSS-esque commenting system.
    - Removes custom variable file.
-   - Issue 27 : Headings now use maps and allows for use cases where authors ned to adjust inside media queries
+   - Improves layout and visual appearance of drop caps.
+   - Improves overall project structure and distribution methods for source code.
 
 -------
 
