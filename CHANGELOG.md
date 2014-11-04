@@ -13,6 +13,7 @@
    - Includes markup file for implementation studies.
    - KSS-esque commenting system.
    - Removes custom variable file.
+   - Issue 27 : Headings now use maps and allows for use cases where authors ned to adjust inside media queries
 
 -------
 

@@ -1,3 +1,5 @@
 .sass-cache
 node_modules/
 .DS_Store
+dev/scss/styles.css
+dev/scss/styles.css.map

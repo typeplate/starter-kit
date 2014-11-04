@@ -2,25 +2,26 @@
 // -------------------------------------//
 
 html {
-	@if $typl8-custom-font {
-		font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-custom-font, $typl8-font-family;
-	} @else {
-		font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-font-family;
-	}
+  @if $typl8-custom-font {
+    font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-custom-font, $typl8-font-family;
+  } @else {
+    font: $typl8-font-weight #{$typl8-font-size + "%"}/#{$typl8-line-height} $typl8-font-family;
+  }
 }
 
 body {
-	@extend %typl8-breakword;
-	@include css-hyphens(auto);
-	color: $typl8-copy-color;
+  @extend %typl8-breakword;
+  @include typl8-hyphens(auto);
+  color: $typl8-copy-color;
 }
 
 
 // $Headings
+// http://codepen.io/grayghostvisuals/pen/IKsbw
 // -------------------------------------//
 
-@include heading-scale;
-@include headings;
+@include typl8-headings;
+@include typl8-headings-style;
 
 h1,
 h2,
@@ -28,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: $typl8-heading-color;
+  color: $typl8-heading-color;
 }
 
 
@@ -36,22 +37,22 @@ h6 {
 // -------------------------------------//
 
 p {
-	margin: auto auto $typl8-indent-val;
-	@if $typl8-paragraph-spacing == false {
-		& + p {
-			text-indent: $typl8-indent-val;
-			margin-top: -$typl8-indent-val;
-		}
-	}
+  margin: auto auto $typl8-indent-val;
+  @if $typl8-paragraph-spacing == false {
+    & + p {
+      text-indent: $typl8-indent-val;
+      margin-top: -$typl8-indent-val;
+    }
+  }
 }
 
 // $Blockquotes
 // -------------------------------------//
 
 blockquote {
-	+ figcaption cite {
-		@extend %typl8-cite;
-	}
+  + figcaption cite {
+    @extend %typl8-cite;
+  }
 }
 
 
@@ -59,7 +60,7 @@ blockquote {
 // -------------------------------------//
 
 small {
-	font-size: $typl8-small-print-size;
+  font-size: $typl8-small-print-size;
 }
 
 
@@ -77,7 +78,7 @@ kbd,
 q,
 samp,
 var {
-	@include css-hyphens(none);
+  @include typl8-hyphens(none);
 }
 
 
@@ -85,17 +86,17 @@ var {
 // -------------------------------------//
 
 pre {
-	@include white-space(pre);
+  @include typl8-white-space(pre);
 
-	code {
-		@extend %typl8-normal-wrap;
-		@include white-space(pre-wrap);
-	}
+  code {
+    @extend %typl8-normal-wrap;
+    @include typl8-white-space(pre-wrap);
+  }
 }
 
 code {
-	@include white-space(pre);
-	font-family: monospace;
+  @include typl8-white-space(pre);
+  font-family: monospace;
 }
 
 
@@ -103,8 +104,8 @@ code {
 // -------------------------------------//
 
 abbr {
-	@include smallcaps($typl8-smcps-color, $typl8-smcps-weight);
-	&[title]:hover {
-		cursor: help;
-	}
+  @include typl8-smallcaps($typl8-smcps-color, $typl8-smcps-weight);
+  &[title]:hover {
+    cursor: help;
+  }
 }

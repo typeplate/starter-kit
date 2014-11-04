@@ -2,24 +2,24 @@
 // -------------------------------------//
 
 .typl8-drop-cap {
-	@include dropcap(
-		$typl8-dropcap-float-position,
-		$typl8-dropcap-font-size,
-		$typl8-dropcap-font-family,
-		$typl8-dropcap-txt-indent,
-		$typl8-dropcap-margin,
-		$typl8-dropcap-padding,
-		$typl8-dropcap-color,
-		$typl8-dropcap-line-height,
-		$typl8-dropcap-bg
-	);
+  @include typl8-dropcap(
+    $typl8-dropcap-float-position,
+    $typl8-dropcap-font-size,
+    $typl8-dropcap-font-family,
+    $typl8-dropcap-txt-indent,
+    $typl8-dropcap-margin,
+    $typl8-dropcap-padding,
+    $typl8-dropcap-color,
+    $typl8-dropcap-line-height,
+    $typl8-dropcap-bg
+  );
 }
 
 // @notes
 // combats our sibling paragraph syling and indentation
 p + .typl8-drop-cap {
-	text-indent: 0;
-	margin-top: 0;
+  text-indent: 0;
+  margin-top: 0;
 }
 
 
@@ -28,33 +28,33 @@ p + .typl8-drop-cap {
 /**
  * Lining Definition Style Markup
  *
-	<dl class="typl8-lining">
-		<dt><b></b></dt>
-		<dd></dd>
-	</dl>
+  <dl class="typl8-lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
  *
  * Extend this object into your markup.
  *
  */
 
 .typl8-lining {
-	@include definition-list-style(lining);
+  @include typl8-definition-list-style(lining);
 }
 
 /**
  * Dictionary Definition Style Markup
  *
-	<dl class="typl8-dictionary-style">
-		<dt><b></b></dt>
-		<dd></dd>
-	</dl>
+  <dl class="typl8-dictionary-style">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
  *
  * Extend this object into your markup.
  *
  */
 
 .typl8-dictionary-style {
-	@include definition-list-style(dictionary-style);
+  @include typl8-definition-list-style(dictionary-style);
 }
 
 
@@ -63,16 +63,16 @@ p + .typl8-drop-cap {
 /**
  * Blockquote Markup
  *
-		<figure>
-			<blockquote cite="">
-				<p></p>
-			</blockquote>
-			<figcaption>
-				<cite>
-					<small><a href=""></a></small>
-				</cite>
-			</figcaption>
-		</figure>
+    <figure>
+      <blockquote cite="">
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <cite>
+          <small><a href=""></a></small>
+        </cite>
+      </figcaption>
+    </figure>
  *
  * Extend this object into your markup.
  *
@@ -87,22 +87,22 @@ p + .typl8-drop-cap {
 /**
  * Pull Quotes Markup
  *
-	<aside class="typl8-pull-quote">
-		<blockquote>
-			<p></p>
-		</blockquote>
-	</aside>
+  <aside class="typl8-pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
  *
  * Extend this object into your custom stylesheet.
  *
  */
 
 .typl8-pull-quote {
-	@include pull-quotes(
-		$typl8-pull-quote-fontsize,
-		$typl8-pull-quote-opacity,
-		$typl8-pull-quote-color
-	);
+  @include typl8-pull-quotes(
+    $typl8-pull-quote-fontsize,
+    $typl8-pull-quote-opacity,
+    $typl8-pull-quote-color
+  );
 }
 
 
@@ -111,11 +111,11 @@ p + .typl8-drop-cap {
 /**
  * Figures Markup
  *
-	<figure>
-		<figcaption>
-			<strong>Fig. X.X | </strong><cite title=""></cite>
-		</figcaption>
-	</figure>
+  <figure>
+    <figcaption>
+      <strong>Fig. X.X | </strong><cite title=""></cite>
+    </figcaption>
+  </figure>
  *
  * Extend this object into your markup.
  *
@@ -127,14 +127,14 @@ p + .typl8-drop-cap {
 /**
  * Footnote Markup : Replace 'X' with your unique number for each footnote
  *
-	<article>
-		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
-		<footer>
-			<ol class="foot-notes">
-				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
-			</ol>
-		</footer>
-	</article>
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
  *
  * Extend this object into your markup.
  *

@@ -2,15 +2,15 @@
 // -------------------------------------//
 
 @font-face {
-	font-family: '#{$typl8-amp-fontface}';
-	src: $typl8-amp-src;
-	unicode-range: U+0026;
+  font-family: '#{$typl8-amp-fontface}';
+  src: $typl8-amp-src;
+  unicode-range: U+0026;
 }
 
 @font-face {
-	font-family: '#{$typl8-amp-fontface}'; // fallback
-	src: $typl8-amp-fallback;
-	unicode-range: U+270C;
+  font-family: '#{$typl8-amp-fontface}'; // fallback
+  src: $typl8-amp-fallback;
+  unicode-range: U+270C;
 }
 
 
@@ -25,14 +25,14 @@
 // 4. Set your '$typl8-icon-fonts' variable as noted
 
 @if ($typl8-icon-fonts != null) {
-	@each $font in $typl8-icon-fonts {
-		@include font-face($font,
-			font-files(
-				'#{$font}/#{$font}.woff',
-				'#{$font}/#{$font}.ttf',
-				'#{$font}/#{$font}.svg', svg
-				),
-			  '#{$font}/#{$font}.eot'
-		)
-	}
+  @each $font in $typl8-icon-fonts {
+    @include font-face($font,
+      font-files(
+        '#{$font}/#{$font}.woff',
+        '#{$font}/#{$font}.ttf',
+        '#{$font}/#{$font}.svg', svg
+        ),
+        '#{$font}/#{$font}.eot'
+    )
+  }
 }
