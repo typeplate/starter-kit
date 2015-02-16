@@ -1,3 +1,14 @@
+**Sass v2.1.0:**
+
+   date: 2015-02-16
+
+   changes:
+
+   - [Issue 23](https://github.com/typeplate/starter-kit/issues/23) : Libsass Interpolation Issues. Thanks for the advice and tips @HugoGiraudel
+   - [Issue 40](https://github.com/typeplate/starter-kit/issues/40) : Backwards calculations for headings. Thanks @ramsaylanier
+
+-------
+
 **Sass & CSS v2.0.0:**
 
    date: 2014-11-04
