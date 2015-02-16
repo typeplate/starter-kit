@@ -14,7 +14,7 @@
 // divide 1 unit of measure by given font-size & return relative value
 
 @function typl8-measure-margin($scale, $measure, $value) {
-  $pixelValue: $measure/$scale;
+  $pixelValue: $scale/$measure; // ($measure/$scale) issue#40 https://github.com/typeplate/starter-kit/issues/40
   $remValue: $pixelValue * $typl8-font-base;
 
   @if $value == rem {

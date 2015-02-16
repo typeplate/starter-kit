@@ -47,7 +47,7 @@
       @include typl8-typescale(
         $size,
         $typl8-font-base,
-        '#{$typl8-typescale-unit}',
+        $typl8-typescale-unit,
         $typl8-measure
       );
     }
