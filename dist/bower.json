@@ -2,5 +2,6 @@
   "name": "typeplate-starter-kit",
   "version": "2.1.0",
   "homepage": "http://typeplate.com",
-  "description": "A Typographic Starter Kit"
+  "description": "A Typographic Starter Kit",
+  "main": "scss/_typeplate.scss, css/typeplate.css"
 }
