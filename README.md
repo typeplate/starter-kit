@@ -9,7 +9,7 @@ Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design c
 <img src="https://raw.github.com/paulirish/browser-logos/master/main-desktop.png" alt="" width="375">
 
 ## &sect; File Size
-Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measely 3kb when compressed. That's really, really small.
+Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measly 3kb when compressed. That's really, really small.
 
 - Raw Sass = **18kb**
 - Compressed Sass = **3 KB**
