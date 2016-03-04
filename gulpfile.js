@@ -109,6 +109,9 @@ gulp.task('copy', function() {
 
   gulp.src('README.md')
     .pipe(gulp.dest('dist'));
+
+  gulp.src('package.json')
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('zipit', function() {
