@@ -10,23 +10,47 @@
 // =======================================================
 
 var gulp       = require('gulp'),
-    compass    = require('gulp-compass'),
+    sass       = require('gulp-sass'),
     livereload = require('gulp-livereload'),
     webserver  = require('gulp-webserver'),
     zip        = require('gulp-zip'),
     del        = require('del');
 
+var paths_dir = {
+  docs: 'docs',
+  docsasset: 'assets',
+  site: 'dev',
+  templates : 'templates',
+  dist: 'dist',
+  sitejs: 'js',
+  sitecss: 'css',
+  sitesass: 'scss'
+};
 
-gulp.task('styles', function() {
-  return gulp.src('dev/scss/**.scss')
-    .pipe(compass({
-      config_file: 'config.rb',
-      sourcemap: true,
-      debug : true,
-      css: 'dev/scss',
-      sass: 'dev/scss'
+var paths = {
+  docs: paths_dir.docs,
+  docsasset: paths_dir.docs + '/' + paths_dir.docsasset,
+  site: paths_dir.site,
+  templates: paths_dir.site + '/' + paths_dir.templates,
+  dist: paths_dir.dist,
+  sitejs: paths_dir.site + '/' + paths_dir.sitejs,
+  sitecss: paths_dir.site + '/' + paths_dir.sitecss,
+  sitesass: paths_dir.site + '/' + paths_dir.sitesass
+};
+
+gulp.task('sass', function() {
+  var stream = gulp.src(paths.sitesass + '/**/*.scss')
+    .pipe($.sass({
+      outputStyle: 'compressed'
     }))
-    .pipe(gulp.dest('dev/scss'));
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest(paths.sitesass))
+    .pipe($.connect.reload());
+
+  return stream;
 });
 
 gulp.task('webserver', function() {
