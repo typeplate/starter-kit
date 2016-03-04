@@ -9,12 +9,15 @@
 // - http://markgoodyear.com/2014/01/getting-started-with-gulp
 // =======================================================
 
-var gulp       = require('gulp'),
-    sass       = require('gulp-sass'),
-    livereload = require('gulp-livereload'),
-    webserver  = require('gulp-webserver'),
-    zip        = require('gulp-zip'),
-    del        = require('del');
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    livereload   = require('gulp-livereload'),
+    autoprefixer = require('gulp-autoprefixer'),
+    connect      = require('gulp-connect'),
+    zip          = require('gulp-zip'),
+    del          = require('del');
+
+$exec   = require('child_process').exec;
 
 var paths_dir = {
   docs: 'docs',
@@ -38,35 +41,44 @@ var paths = {
   sitesass: paths_dir.site + '/' + paths_dir.sitesass
 };
 
+
+// ===================================================
+// Styles
+// ===================================================
+
 gulp.task('sass', function() {
   var stream = gulp.src(paths.sitesass + '/**/*.scss')
-    .pipe($.sass({
+    .pipe(sass({
       outputStyle: 'compressed'
     }))
-    .pipe($.autoprefixer({
+    .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
     .pipe(gulp.dest(paths.sitesass))
-    .pipe($.connect.reload());
+    .pipe(connect.reload());
 
   return stream;
 });
 
-gulp.task('webserver', function() {
-  gulp.src('dev')
-    .pipe(webserver({
-      port: 9000,
-      path: 'dev/',
-      livereload: true,
-      directoryListing: false,
-      open: true
-    }));
+
+// ===================================================
+// Server
+// ===================================================
+
+gulp.task('serve', function() {
+  connect.server({
+    root: [paths.site],
+    port: 9001,
+    livereload: true
+  });
+
+  $exec('open http://localhost:9001/index.html');
 });
 
+
 gulp.task('watch', function() {
-  gulp.watch('dev/scss/**.scss', ['styles']);
-  livereload.listen();
+  gulp.watch('dev/scss/**.scss', ['sass']);
 });
 
 gulp.task('cleandev', function(cb) {
@@ -108,7 +120,7 @@ gulp.task('zipit', function() {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('default', ['webserver', 'watch']);
+gulp.task('default', ['serve', 'watch']);
 gulp.task('prep', ['cleandev']);
 gulp.task('build', ['zipit', 'copy']);
 gulp.task('ship', ['cleandist']);
