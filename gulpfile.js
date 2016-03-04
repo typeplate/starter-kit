@@ -68,12 +68,12 @@ gulp.task('sass', function() {
 
 gulp.task('serve', function() {
   connect.server({
-    root: [paths.site],
+    root: ['index.html'],
     port: 9001,
     livereload: true
   });
 
-  $exec('open http://localhost:9001/index.html');
+  $exec('open http://localhost:9001');
 });
 
 
@@ -104,10 +104,7 @@ gulp.task('copy', function() {
   gulp.src('license.txt')
     .pipe(gulp.dest('dist'));
 
-  gulp.src('dev/CHANGELOG.md')
-    .pipe(gulp.dest('dist'));
-
-  gulp.src('dev/bower.json')
+  gulp.src('dev/*.{md,json}')
     .pipe(gulp.dest('dist'));
 
   gulp.src('README.md')
