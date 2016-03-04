@@ -90,6 +90,7 @@ gulp.task('cleandev', function(cb) {
 
 gulp.task('cleandist', function(cb) {
   del([
+    'dist/scss/styles.scss',
     'dist/scss/styles.css',
     'dist/scss/styles.css.map'
   ], cb);
