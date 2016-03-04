@@ -1,6 +1,6 @@
 {
-  "name": "TypeplateStarterKit",
-  "description": "A Typographic Starter Kit for the Web",
+  "name": "typeplate",
+  "description": "A Typographic Starter Kit",
   "version": "2.1.0",
   "authors": [
     "Dennis Gaebel",
@@ -12,6 +12,11 @@
     "url": "https://github.com/typeplate/starter-kit"
   },
   "license": "CC-BY-3.0",
+  "filename": {
+    "type": "string",
+    "required": true,
+    "description": "css/typeplate.min.css"
+  },
   "devDependencies": {
     "del": "^0.1.3",
     "gulp-connect": "^3.1.0",
