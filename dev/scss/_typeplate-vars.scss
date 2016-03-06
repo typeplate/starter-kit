@@ -16,7 +16,7 @@ $typl8-font-size: 112.5 !default;
 $typl8-font-base: 16 * ($typl8-font-size/100) !default;
 $typl8-measure: $typl8-font-base * $typl8-line-height !default;
 $typl8-prefixes: -webkit-, -moz-, -ms-, '' !default;
-$typl8-typescale-unit: rem !default;
+$typl8-typescale-unit: em !default;
 
 
 // $Paragraphs
@@ -27,7 +27,7 @@ $typl8-typescale-unit: rem !default;
 // $typl8-paragraph-spacing             [<'false'> | <'true'>]
 
 $typl8-paragraph-spacing: false !default;
-$typl8-indent-val: 1.5em !default;
+$typl8-indent-val: 1.5rem !default;
 
 
 // $Small-Print
