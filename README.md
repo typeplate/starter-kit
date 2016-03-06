@@ -70,14 +70,11 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 
 ## Contributing
 
-In order to contribute you need the confidence to work with Gulp, the CLI and Ruby Gems. Our main work is done on the [development branch](https://github.com/typeplate/starter-kit/tree/development) and distributed on master. Gulp tasks are as follows:
+In order to contribute you need the confidence to work with Gulp and NPM. Our main work is done on the [development branch](https://github.com/typeplate/starter-kit/tree/development) and distributed on master. Gulp tasks are as follows:
 
 ```bash
 # Install Gulp dependencies
 $ npm install
-
-# Install Gems
-$ bundle install
 
 # Watch and compile Sass
 $ gulp
