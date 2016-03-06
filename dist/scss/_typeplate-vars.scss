@@ -16,6 +16,7 @@ $typl8-font-size: 112.5 !default;
 $typl8-font-base: 16 * ($typl8-font-size/100) !default;
 $typl8-measure: $typl8-font-base * $typl8-line-height !default;
 $typl8-prefixes: -webkit-, -moz-, -ms-, '' !default;
+$typl8-typescale-unit: rem !default;
 
 
 // $Paragraphs
@@ -49,16 +50,6 @@ $typl8-amp-fontface: Ampersand !default;
 $typl8-amp-fontfamily: Verdana, sans-serif !default;
 $typl8-amp-src: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua') !default;
 $typl8-amp-fallback: local('Georgia') !default;
-
-
-// $Icon-Font-Helper
-// -------------------------------------//
-// Link single or multiple icon font sets. Requires Compass
-//
-// single icon font             $typl8-icon-fonts: (icon-name);
-// multiple icon fonts          $typl8-icon-fonts: (icon-name1, icon-name2, icon-name3);
-
-$typl8-icon-fonts: null !default;
 
 
 // $Typescale
@@ -95,12 +86,6 @@ $typl8-headings: (
   h5: typl8-delta,
   h6: typl8-zeta
 ) !default;
-
-
-// $Typescale Unit
-// -------------------------------------//
-
-$typl8-typescale-unit: rem !default;
 
 
 // $Pull-Quotes
