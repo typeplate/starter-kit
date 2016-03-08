@@ -43,19 +43,19 @@ var paths = {
 
 
 // ===================================================
-// Styles
+// Styling
 // ===================================================
 
 gulp.task('sass', function() {
   var stream = gulp.src(paths.sitesass + '/**/*.scss')
     .pipe(sass({
-      outputStyle: 'compressed'
+      outputStyle: 'expanded'
     }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest(paths.sitesass))
+    .pipe(gulp.dest(paths.sitecss))
     .pipe(connect.reload());
 
   return stream;
@@ -63,7 +63,7 @@ gulp.task('sass', function() {
 
 
 // ===================================================
-// Server
+// Serving
 // ===================================================
 
 gulp.task('serve', function() {
@@ -77,9 +77,18 @@ gulp.task('serve', function() {
 });
 
 
+// ===================================================
+// Watching
+// ===================================================
+
 gulp.task('watch', function() {
-  gulp.watch('dev/scss/**.scss', ['sass']);
+  gulp.watch(paths.sitesass + '/**/*.scss', ['sass']);
 });
+
+
+// ===================================================
+// Cleaning
+// ===================================================
 
 gulp.task('cleandev', function(cb) {
   del([
@@ -96,6 +105,11 @@ gulp.task('cleandist', function(cb) {
   ], cb);
 });
 
+
+// ===================================================
+// Copying
+// ===================================================
+
 gulp.task('copy', function() {
   gulp.src('dev/css/**')
     .pipe(gulp.dest('dist/css'));
@@ -103,24 +117,28 @@ gulp.task('copy', function() {
   gulp.src('dev/scss/**')
     .pipe(gulp.dest('dist/scss'));
 
-  gulp.src('license.txt')
+  gulp.src('{README,package,license}.{md,package,txt}')
     .pipe(gulp.dest('dist'));
 
   gulp.src('dev/*.{md,json}')
     .pipe(gulp.dest('dist'));
-
-  gulp.src('README.md')
-    .pipe(gulp.dest('dist'));
-
-  gulp.src('package.json')
-    .pipe(gulp.dest('dist'));
 });
+
+
+// ===================================================
+// Packaging
+// ===================================================
 
 gulp.task('zipit', function() {
   return gulp.src('dev/scss/**.scss')
     .pipe(zip('typeplate-sk.zip'))
     .pipe(gulp.dest('.'));
 });
+
+
+// ===================================================
+// Tasking
+// ===================================================
 
 gulp.task('default', ['serve', 'watch']);
 gulp.task('prep', ['cleandev']);

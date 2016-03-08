@@ -14,7 +14,7 @@
     @if $value == rem {
       margin-bottom: typl8-measure-margin($scale, $measure, $value);
     } @else if $value == em {
-      margin-bottom: typl8-measure-margin($scale, $measure, $value: em);
+      margin-bottom: typl8-measure-margin($scale, $measure, $value: rem);
     } @else {
       margin-bottom: typl8-measure-margin($scale, $measure, $value: px);
     }
