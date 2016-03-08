@@ -117,7 +117,7 @@ gulp.task('copy', function() {
   gulp.src('dev/scss/**')
     .pipe(gulp.dest('dist/scss'));
 
-  gulp.src('{README,package,license}.{md,package,txt}')
+  gulp.src('{README,package,license}.{json,md,package,txt}')
     .pipe(gulp.dest('dist'));
 
   gulp.src('dev/*.{md,json}')
