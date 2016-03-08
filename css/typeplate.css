@@ -1,21 +1,13 @@
+@charset "UTF-8";
 /*!
-TYPEPLATE : STARTER KIT
+Typeplate : Starter Kit
 URL ........... http://typeplate.com
-VERSION ....... 2.1.0
+Version ....... 3.0.1
 Github ........ https://github.com/typeplate/starter-kit
-AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
-LICENSE URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+License ....... Creative Commmons Attribution 3.0
+License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
 */
-
-
-/**
- *
- * =======================================================================
-   Unicode Ampersand
- * =======================================================================
- */
-
 @font-face {
   font-family: "Ampersand";
   src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
@@ -28,74 +20,137 @@ LICENSE URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
   unicode-range: U+270C;
 }
 
-
-/**
- *
- * Extend this class on any element of your
- * choice for ampersands.
- *
- * For example:
-
-  <h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
-
- */
-.typl8-ampersand {
-  font-family: Ampersand, Verdana, sans-serif;
+.typl8-tera, .typl8-giga, .typl8-mega, h1, .typl8-alpha, h2, .typl8-beta, h3, .typl8-gamma, h4, .typl8-delta, h5, .typl8-epsilon, .typl8-zeta, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  color: #222;
 }
 
+blockquote + figcaption cite {
+  display: block;
+  font-size: inherit;
+  text-align: right;
+}
 
-/**
- *
- * =======================================================================
-   Word Wrap
- * =======================================================================
- */
-
-.typl8-breakword {
+body {
   word-wrap: break-word;
 }
 
-.typl8-normal-wrap {
+pre code {
   word-wrap: normal;
 }
 
-.typl8-inherit-wrap {
-  word-wrap: auto;
+html {
+  font: normal 112.5% / 1.65 serif;
 }
 
-
-/**
- *
- * =======================================================================
-   OpenType
- * =======================================================================
- */
-
-.typl8-font-feature--smcp {
-  -webkit-font-feature-settings: "smcp";
-  -moz-font-feature-settings: "smcp";
-  -ms-font-feature-settings: "smcp";
-  font-feature-settings: "smcp";
+body {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  color: #444;
 }
 
-.typl8-font-feature--onum {
-  -webkit-font-feature-settings: 'onum';
-  -moz-font-feature-settings: 'onum';
-  -ms-font-feature-settings: 'onum';
-  font-feature-settings: 'onum';
+.typl8-tera {
+  font-size: 6.5em;
+  margin-bottom: 3.93939rem;
 }
 
+.typl8-giga {
+  font-size: 5em;
+  margin-bottom: 3.0303rem;
+}
 
-/**
- *
- * =======================================================================
- * Drop Capitals:
- * Extend this object into your markup.
+.typl8-mega, h1 {
+  font-size: 4em;
+  margin-bottom: 2.42424rem;
+}
 
-   <p class="typl8-drop-cap">What a wonderful day it is out there wouldn't you'd say?</p>
+.typl8-alpha, h2 {
+  font-size: 3.33333em;
+  margin-bottom: 2.0202rem;
+}
 
-  * =======================================================================
- */
+.typl8-beta, h3 {
+  font-size: 2.66667em;
+  margin-bottom: 1.61616rem;
+}
+
+.typl8-gamma, h4 {
+  font-size: 2em;
+  margin-bottom: 1.21212rem;
+}
+
+.typl8-delta, h5 {
+  font-size: 1.33333em;
+  margin-bottom: 0.80808rem;
+}
+
+.typl8-epsilon {
+  font-size: 1.16667em;
+  margin-bottom: 0.70707rem;
+}
+
+.typl8-zeta, h6 {
+  font-size: 1em;
+  margin-bottom: 0.60606rem;
+}
+
+p {
+  margin: auto auto 1.5rem;
+}
+
+p + p {
+  text-indent: 1.5rem;
+  margin-top: -1.5rem;
+}
+
+small {
+  font-size: 65%;
+}
+
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre {
+  white-space: pre;
+}
+
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+
+abbr[title]:hover {
+  cursor: help;
+}
 
 .typl8-drop-cap:first-letter {
   float: left;
@@ -114,253 +169,6 @@ p + .typl8-drop-cap {
   margin-top: 0;
 }
 
-
-/**
- *
- * =======================================================================
-   Base Type
- * =======================================================================
- *
- */
-
-html {
-  font: normal 112.5%/1.65 serif; /* base font size 18px with 1.65 line-height */
-}
-
-body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-wrap: break-word;
-  color: #444444;
-}
-
-
-/**
- *
- * =======================================================================
-   Fine Print
- * =======================================================================
- */
-
-small {
-  font-size: 65%;
-}
-
-
-/**
- *
- * =======================================================================
-   Headings
- * =======================================================================
- */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
-  margin-top: 0;
-  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-  color: #222222;
-}
-
-
-/**
-* Extend included classes on any element of your
-* choosing for adjusting type based on the scale
-* provided.
-
-* For example:
-
- <h6 class="typl8-giga">Awesome Headline</h6>
- <p class="typl8-tera">a story about a dude</p>
-
-* Our Type Scale is as follows with px fallbacks
-* for IE 6-8 as they do not understand REM units.
-*
-* 18, 21, 24, 36, 48, 60, 72, 90, 117
-*
-*
-* Explanation:
-* margin-bottom = ( base font-size * base line-height ) / current font-size
-*
-* Makes sure that there's always one unit of measure's worth of space between shit
-* for headings. This is better than spacing using line-height because of the wrapping issue where we have
-* wrapping onto 2 lines with a high line-height.
- */
-
-.typl8-tera {
-  font-size: 117px;
-  font-size: 6.5rem; /* 117 / 18 = 6.5 */
-  margin-bottom: 4.56923px;
-  margin-bottom: 0.25385rem;
-}
-
-.typl8-giga {
-  font-size: 90px;
-  font-size: 5rem; /* 90 / 18 = 5 */
-  margin-bottom: 5.94px;
-  margin-bottom: 0.33rem;
-}
-
-.typl8-mega {
-  font-size: 72px;
-  font-size: 4rem; /* 72 / 18 = 4 */
-  margin-bottom: 7.425px;
-  margin-bottom: 0.4125rem;
-}
-
-h1,
-.typl8-alpha {
-  font-size: 60px;
-  font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
-  margin-bottom: 8.91px;
-  margin-bottom: 0.495rem;
-}
-
-h2,
-.typl8-beta {
-  font-size: 48px;
-  font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
-  margin-bottom: 11.1375px;
-  margin-bottom: 0.61875rem;
-}
-
-h3,
-.typl8-gamma {
-  font-size: 36px;
-  font-size: 2rem; /* 36 / 18 = 2 */
-  margin-bottom: 14.85px;
-  margin-bottom: 0.825rem;
-}
-
-h4,
-.typl8-delta {
-  font-size: 24px;
-  font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333 */
-  margin-bottom: 22.275px;
-  margin-bottom: 1.2375rem;
-}
-
-h5,
-.typl8-epsilon {
-  font-size: 21px;
-  font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
-  margin-bottom: 25.45714px;
-  margin-bottom: 1.41429rem;
-}
-
-h6,
-.typl8-zeta {
-  font-size: 18px;
-  font-size: 1rem; /* 18 = 18 × 1 */
-  margin-bottom: 29.7px;
-  margin-bottom: 1.65rem;
-}
-
-
-/**
- *
- * =======================================================================
-   Paragraphs and Indentation
- * =======================================================================
- */
-
-p {
-  margin: auto auto 1.5em; /* bottom margin for paragraphs */
-}
-
-p + p {
-  text-indent: 1.5em; /* indent subsequent paragraphs */
-  margin-top: -1.5em; /* no top margin on subsequent paragraphs */
-}
-
-
-/**
- *
- * =======================================================================
-   Hyphens
- * =======================================================================
- */
-
-input,
-abbr,
-acronym,
-blockquote,
-code,
-kbd,
-q,
-samp,
-var {
-  /* Accepted values: [ none | manual | auto ] */ /* http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation */
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-
-/**
- *
- * =======================================================================
-   Code Blocks
- * =======================================================================
- */
-
-pre code {
-  word-wrap: normal;
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap;
-}
-
-pre {
-  white-space: pre;
-}
-
-code {
-  white-space: pre;
-  font-family: monospace;
-}
-
-
-/**
- *
- * =======================================================================
- * Abbreviations Markup
- * Extend this object into your markup
-
-  <abbr title="hyper text markup language">HMTL</abbr>
-
- * Extend this object into your markup.
- * =======================================================================
- */
-
-abbr {
-  -webkit-font-variant: small-caps;
-  -moz-font-variant: small-caps;
-  -ms-font-variant: small-caps;
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
-  color: gray;
-}
-
-abbr[title]:hover {
-  cursor: help; /* cursor changed to a question mark when it has a title */
-}
-
-
-/**
- *
- * =======================================================================
-   Definition Lists
- * =======================================================================
- */
-
 /**
  * Lining Definition Style Markup
  *
@@ -377,26 +185,28 @@ abbr[title]:hover {
   display: inline;
   margin: 0;
 }
+
 .typl8-lining dt + dt:before,
 .typl8-lining dd + dt:before {
   content: "\A";
   white-space: pre;
 }
+
 .typl8-lining dd + dd:before {
   content: ", ";
 }
+
 .typl8-lining dd:before {
   content: ": ";
-  margin-left: -0.2em;
+  margin-left: -0.2rem;
 }
-
 
 /**
  * Dictionary Definition Style Markup
  *
   <dl class="typl8-dictionary-style">
     <dt><b></b></dt>
-      <dd></dd>
+    <dd></dd>
   </dl>
  *
  * Extend this object into your markup.
@@ -406,66 +216,38 @@ abbr[title]:hover {
   display: inline;
   counter-reset: definitions;
 }
+
 .typl8-dictionary-style dt + dt:before {
   content: ", ";
-  margin-left: -0.2em;
+  margin-left: -0.2rem;
 }
+
 .typl8-dictionary-style dd {
   display: block;
   counter-increment: definitions;
 }
+
 .typl8-dictionary-style dd:before {
   content: counter(definitions, decimal) ". ";
 }
 
-
-/**
- *
- * =======================================================================
-   Blockquotes
- * =======================================================================
- */
-
 /**
  * Blockquote Markup
  *
-  <figure>
-    <blockquote class="typl8-blockquote" cite="">
-      <p></p>
-    </blockquote>
-    <figcaption>
-      <cite>
-        <small><a href=""></a></small>
-      </cite>
-    </figcaption>
-  </figure>
+    <figure>
+      <blockquote cite="">
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <cite>
+          <small><a href=""></a></small>
+        </cite>
+      </figcaption>
+    </figure>
  *
  * Extend this object into your markup.
  *
  */
-
-.typl8-blockquote p:last-of-type {
-  margin-bottom: -0.825em;
-}
-
-.typl8-blockquote + figcaption {
-  display: block;
-  font-size: inherit;
-  text-align: right;
-}
-
-.typl8-blockquote + figcaption:before {
-  content: "-"; /* "-" is your citation flourish */
-}
-
-
-/**
- *
- * =======================================================================
-   Pull Quotes
- * =======================================================================
- */
-
 /**
  * Pull Quotes Markup
  *
@@ -482,54 +264,39 @@ abbr[title]:hover {
   position: relative;
   padding: 1em;
 }
-.typl8-pull-quote:before,
-.typl8-pull-quote:after {
+
+.typl8-pull-quote:before, .typl8-pull-quote:after {
   height: 1em;
-  opacity: 0.15;
+  opacity: 0.5;
   position: absolute;
   font-size: 4em;
   color: #dc976e;
 }
+
 .typl8-pull-quote:before {
   content: '“';
   top: 0;
   left: 0;
 }
+
 .typl8-pull-quote:after {
   content: '”';
   bottom: 0;
   right: 0;
 }
 
-
-/**
- *
- * =======================================================================
-   Figures
- * =======================================================================
- */
-
 /**
  * Figures Markup
  *
   <figure>
     <figcaption>
-      <strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+      <strong>Fig. X.X | </strong><cite title=""></cite>
     </figcaption>
   </figure>
  *
  * Extend this object into your markup.
  *
  */
-
-
-/**
- *
- * =======================================================================
-   Foot Notes
- * =======================================================================
- */
-
 /**
  * Footnote Markup : Replace 'X' with your unique number for each footnote
  *
