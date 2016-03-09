@@ -1,3 +1,17 @@
+**Sass & CSS v3.0.0-v3.0.1:**
+
+   date: 2016-03-08
+
+   changes:
+
+   - [Issue 47](https://github.com/typeplate/starter-kit/issues/47): Expose ``package.json`` for CDNJS lib.
+   - Removed Icon Font Helper
+   - Removed Compass Remnants
+   - Updated Installation Docs
+   - New file import structure for sass partials
+
+-------
+
 **Sass v2.1.0:**
 
    date: 2015-02-16
@@ -42,7 +56,7 @@
 -------
 
 **CSS v1.1.3:**
-  
+
    date: 2014-03-06
 
    changes:
@@ -50,7 +64,7 @@
    - Issue 139: Pixel fallback for bottom margin on headers. Smaller Copyright Block and Harry Roberts Shoutout.
 
 **Sass v1.1.3:**
-  
+
    date: 2014-03-06
 
    changes:
@@ -61,7 +75,7 @@
 
 
 **CSS v1.1.2:**
-  
+
    date: 2014-01-11
 
    changes:
@@ -69,7 +83,7 @@
    - Issue 138: Small Unit bug for bottom margin on line 211. Now uses ems instead of rems.
 
 **Sass v1.1.2:**
-  
+
    date: 2013-11-20
 
    changes:
@@ -79,7 +93,7 @@
 -------
 
 **v1.0.2:**
-   
+
    date: 2013-05-11
 
    changes:
@@ -102,7 +116,7 @@
   date: 2013-03-11
 
   changes:
-  
+
    - Indenting subsequent paragraphs
    - misc. spelling corrections
    - Compiling errors fixed for LESS and Stylus.
