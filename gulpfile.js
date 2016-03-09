@@ -130,7 +130,7 @@ gulp.task('copy', function() {
 // ===================================================
 
 gulp.task('zipit', function() {
-  return gulp.src('dev/scss/**.scss')
+  return gulp.src('dev/scss/_**.scss')
     .pipe(zip('typeplate-sk.zip'))
     .pipe(gulp.dest('.'));
 });
