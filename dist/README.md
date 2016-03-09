@@ -9,11 +9,7 @@ Typeplate is a "typographic starter kit". We don&rsquo;t make aesthetic design c
 <img src="https://raw.github.com/paulirish/browser-logos/master/main-desktop.png" alt="" width="375">
 
 ## &sect; File Size
-Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just a measely 3kb when compressed. That's really, really small.
-
-- Raw Sass = **18kb**
-- Compressed Sass = **3 KB**
-- Raw CSS = **10 KB**
+Typeplate is just a measely **4.91 KB** and especially smaller when compressed!
 
 ## Installation
 
@@ -31,9 +27,8 @@ Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just
 // Imports
 // ====================================
 
-@import "compass"; // Not required. For example purposes only.
-@import "[your_project_path]/reset"; // Not required. For example purposes only.
-@import "[your_project_path]/typeplate-sk/typeplate";
+@import "[your_project_path]/resets"; // Not required. Example purposes only.
+@import "[your_project_path]/scss/typeplate-sk/typeplate-index";
 
 
 // Custom Author Styles
@@ -43,19 +38,19 @@ Not much goin&rsquo; on here in terms of bulk. As you can see, Typeplate is just
 Authors can also venture one step further and include a custom variables file in order to override the defaults we've provided.
 
 ```scss
-@import "[your_project_path]/typeplate-custom-vars"; // Must come first
-@import "[your_project_path]/typeplate-vars"; // Must follow typeplate-custom-vars
+@import "[your_project_path]/typeplate-vars";
+@import "[your_project_path]/typeplate-custom-vars";
 ```
 
 ### &sect; Installation via ``.css``
 
-If the Sass version isn't your cup of tea, we've provided a CSS version. Simply place the contents of ``typeplate-sk.css`` inside your project's stylesheet (reset, typeplate, author styles).
+If the Sass version isn't your cup of tea, we've provided a CSS version. Simply place the contents of ``typeplate.css`` inside your project's stylesheet (reset, typeplate, author styles). This can be done manually or with bower and CDNJS.
 
 ###### Option #1 This method is not the best as it results in more HTTP requests.
 ```html
 <head>
     <link rel="stylesheet" href="[project_path]/css/normalize.css"><!-- Reset of your choice (optional). We like normalize even though it's not a reset -->
-    <link rel="stylesheet" href="[project_path]/css/typeplate-sk.css"><!-- typeplate styles -->
+    <link rel="stylesheet" href="[project_path]/css/typeplate.css"><!-- typeplate styles -->
     <link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet -->
 </head>
 ```
@@ -64,13 +59,13 @@ If the Sass version isn't your cup of tea, we've provided a CSS version. Simply 
 
 ```html
 <head>
-    <link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet with typeplate-sk.css inside -->
+    <link rel="stylesheet" href="[project_path]/css/main.css"><!-- main stylesheet with typeplate.css inside -->
 </head>
 ```
 
 ## Contributing
 
-In order to contribute you need the confidence to work with Gulp and NPM. Our main work is done on the [development branch](https://github.com/typeplate/starter-kit/tree/development) and distributed on master. Gulp tasks are as follows:
+In order to contribute you need the confidence to work with Gulp and NPM. Our main work is done on the [development branch](https://github.com/typeplate/starter-kit/tree/development) and distributed on master. Please make sure **ALL** pull requests are submitted to the development branch.
 
 ```bash
 # Install Gulp dependencies
@@ -78,15 +73,6 @@ $ npm install
 
 # Watch and compile Sass
 $ gulp
-
-# Prepare output for dist directory
-$ gulp prep
-
-# Place output for dist directory
-$ gulp build
-
-# Final prep for deployment
-$ gulp ship
 ```
 
 ## &sect; What Else Is There?
@@ -98,5 +84,5 @@ With so many packages to choose from, we recommend a few libraries to use with T
 4. [Team Sass Modular Scale](https://github.com/Team-Sass/modular-scale) - Sassy Modular Scale
 
 ###### ©credits
-Typeplate Starter Kit &copy;2014 &bull; A [@grayghostvisuals](https://twitter.com/gryghostvisuals) and [@zakkain](https://twitter.com/zakkain) Joint™
+Typeplate Starter Kit &copy;2016 &bull; A [@grayghostvisuals](https://twitter.com/gryghostvisuals) and [@zakkain](https://twitter.com/zakkain) Joint™
 Logo Crafting by [@TommyCreenan](https://twitter.com/TommyCreenan).
