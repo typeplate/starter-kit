@@ -142,6 +142,6 @@ gulp.task('zipit', function() {
 
 gulp.task('default', ['serve', 'watch']);
 gulp.task('sweep', ['cleandev']);
-gulp.task('cleanse', ['cleandev']);
 gulp.task('build', ['copy']);
+gulp.task('cleanse', ['cleandist']);
 gulp.task('ship', ['zipit']);
