@@ -164,13 +164,13 @@
   }
 
   &:before {
-    content: '“';
+    content: '\u201c';
     top:  0;
     left: 0;
   }
 
   &:after {
-    content: '”';
+    content: '\u201d';
     bottom: 0;
     right: 0;
   }
