@@ -46,6 +46,23 @@ Authors can also venture one step further and include a custom variables file in
 
 If the Sass version isn't your cup of tea, we've provided a CSS version. Simply place the contents of ``typeplate.css`` inside your project's stylesheet (reset, typeplate, author styles). This can be done manually or with bower and CDNJS.
 
+### &sect; Installation via ``npm``
+
+1. ``npm i typeplate-starter-kit``
+2. Import from your project's primary ``.scss`` file like so:
+
+```scss
+// Imports
+// ====================================
+
+@import "[your_project_path]/resets"; // Not required. Example purposes only.
+@import 'node_modules/typeplate-starter-kit/dist/scss/_typeplate-index';
+
+
+// Custom Author Styles
+// ====================================
+```
+
 ###### Option #1 This method is not the best as it results in more HTTP requests.
 ```html
 <head>
