@@ -11,7 +11,6 @@
 
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
-    livereload   = require('gulp-livereload'),
     autoprefixer = require('gulp-autoprefixer'),
     connect      = require('gulp-connect'),
     zip          = require('gulp-zip'),
@@ -66,7 +65,7 @@ gulp.task('sass', function() {
 // Serving
 // ===================================================
 
-gulp.task('serve', function() {
+gulp.task('serve', function(done) {
   connect.server({
     root: [paths.site],
     port: 9001,
@@ -74,6 +73,8 @@ gulp.task('serve', function() {
   });
 
   $exec('open http://localhost:9001');
+
+  done();
 });
 
 
@@ -81,8 +82,10 @@ gulp.task('serve', function() {
 // Watching
 // ===================================================
 
-gulp.task('watch', function() {
-  gulp.watch(paths.sitesass + '/**/*.scss', ['sass']);
+gulp.task('watch', function(done) {
+  gulp.watch(paths.sitesass + '/**/*.scss', gulp.task('sass'));
+
+  done();
 });
 
 
@@ -91,14 +94,14 @@ gulp.task('watch', function() {
 // ===================================================
 
 gulp.task('cleandev', function(cb) {
-  del([
+  return del([
     'dev/scss/*.css',
     'dev/{css,scss}/*.css.map'
   ], cb);
 });
 
 gulp.task('cleandist', function(cb) {
-  del([
+  return del([
     'dist/scss/typeplate.scss',
     'dist/scss/*.css',
     'dist/scss/*.css.map'
@@ -110,7 +113,7 @@ gulp.task('cleandist', function(cb) {
 // Copying
 // ===================================================
 
-gulp.task('copy', function() {
+gulp.task('copy', function(done) {
   gulp.src('dev/css/**')
     .pipe(gulp.dest('dist/css'));
 
@@ -122,6 +125,8 @@ gulp.task('copy', function() {
 
   gulp.src('dev/*.{md,json}')
     .pipe(gulp.dest('dist'));
+
+  done();
 });
 
 
@@ -140,8 +145,8 @@ gulp.task('zipit', function() {
 // Tasking
 // ===================================================
 
-gulp.task('default', ['serve', 'watch']);
-gulp.task('sweep', ['cleandev']);
-gulp.task('build', ['copy']);
-gulp.task('cleanse', ['cleandist']);
-gulp.task('ship', ['zipit']);
+gulp.task('default', gulp.parallel('serve', 'watch'));
+gulp.task('sweep', gulp.task('cleandev'));
+gulp.task('build', gulp.task('copy'));
+gulp.task('cleanse', gulp.task('cleandist'));
+gulp.task('ship', gulp.task('zipit'));
